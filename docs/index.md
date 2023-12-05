@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-    name: "My Awesome Project"
-    text: "A VitePress Site"
-    tagline: My great project tagline
+    name: Zod
+    text: TypeScript-First Schema Validation
+    tagline: Achieve Limitless Schema Validation Through the Power of Static Type Inference.
     actions:
         - theme: brand
           text: Markdown Examples

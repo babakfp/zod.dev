@@ -1,0 +1,7 @@
+.text {
+    text-wrap: balance !important;
+}
+
+.tagline {
+    text-wrap: pretty !important;
+}
