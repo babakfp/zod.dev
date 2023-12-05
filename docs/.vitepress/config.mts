@@ -22,6 +22,7 @@ export default defineConfig({
         ],
 
         socialLinks: [
+            { icon: "discord", link: "https://discord.gg/KaSRdyX2vc" },
             { icon: "github", link: "https://github.com/colinhacks/zod" },
         ],
     },
