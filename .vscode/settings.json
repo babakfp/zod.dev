@@ -2,5 +2,10 @@
     "files.exclude": {
         "**/.vitepress/dist": true,
         "**/.vitepress/cache": true
+    },
+    "files.readonlyInclude": {
+        "**/.vitepress/dist": true,
+        "**/.vitepress/cache": true,
+        "pnpm-lock.yaml": true
     }
 }
