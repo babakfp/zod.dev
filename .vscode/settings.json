@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/.vitepress/dist": true,
+        "**/.vitepress/cache": true
+    }
+}
