@@ -14,6 +14,9 @@ hero:
         - theme: alt
           text: API Examples
           link: /api-examples
+    image:
+        src: /home-hero-image.svg
+        alt: Vite
 
 features:
     - title: Feature A
