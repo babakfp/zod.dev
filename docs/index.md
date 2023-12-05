@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+titleTemplate: TypeScript-First Schema Validation With Static Type Inference
 
 hero:
     name: Zod
