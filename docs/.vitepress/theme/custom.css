@@ -5,3 +5,23 @@
 .tagline {
     text-wrap: pretty !important;
 }
+
+:root {
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(
+        -30deg,
+        var(--vp-button-brand-bg) 30%,
+        var(--vp-button-brand-hover-bg)
+    );
+
+    --vp-home-hero-image-background-image-opacity: 40%;
+    --vp-home-hero-image-background-image: linear-gradient(
+        rgb(62 99 221 / var(--vp-home-hero-image-background-image-opacity)) 50%,
+        rgb(62 99 221 / var(--vp-home-hero-image-background-image-opacity)) 50%
+    );
+    --vp-home-hero-image-filter: blur(40px);
+}
+
+html:not(.dark):root {
+    --vp-home-hero-image-background-image-opacity: 20%;
+}

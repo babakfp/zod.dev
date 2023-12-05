@@ -5,7 +5,7 @@ export default defineConfig({
     title: "Zod",
     description: "TypeScript-First Schema Validation",
     themeConfig: {
-        logo: "/logo.svg",
+        logo: { light: "/logo-light.svg", dark: "/logo-dark.svg", alt: "Zod" },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: "Home", link: "/" },
