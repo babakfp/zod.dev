@@ -1,0 +1,23 @@
+:root {
+    --vp-code-block-bg: var(--vp-c-divider);
+}
+
+.vp-doc [class*="language-"] > button.copy {
+    --border-radius: 8px;
+    --size: 36px;
+    background-size: 16px;
+    border-radius: var(--border-radius);
+    width: var(--size);
+    height: var(--size);
+}
+
+.vp-doc [class*="language-"] > button.copy.copied,
+.vp-doc [class*="language-"] > button.copy:hover.copied {
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.vp-doc [class*="language-"] > button.copy.copied::before,
+.vp-doc [class*="language-"] > button.copy:hover.copied::before {
+    height: var(--size);
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
