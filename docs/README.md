@@ -45,120 +45,120 @@
 
 #### Go to [zod.js.org](https://zod.js.org) >> -->
 
-- [Table of contents](#table-of-contents)
-- [Introduction](#introduction)
-  - [Sponsors](#sponsors)
-    - [Gold](#gold)
-    - [Silver](#silver)
-    - [Bronze](#bronze)
-  - [Ecosystem](#ecosystem)
-    - [Resources](#resources)
-    - [API libraries](#api-libraries)
-    - [Form integrations](#form-integrations)
-    - [Zod to X](#zod-to-x)
-    - [X to Zod](#x-to-zod)
-    - [Mocking](#mocking)
-    - [Powered by Zod](#powered-by-zod)
-    - [Utilities for Zod](#utilities-for-zod)
-- [Installation](#installation)
-  - [Requirements](#requirements)
-  - [From `npm` (Node/Bun)](#from-npm-nodebun)
-  - [From `deno.land/x` (Deno)](#from-denolandx-deno)
-- [Basic usage](#basic-usage)
-- [Primitives](#primitives)
-- [Coercion for primitives](#coercion-for-primitives)
-- [Literals](#literals)
-- [Strings](#strings)
-  - [ISO datetimes](#iso-datetimes)
-  - [IP addresses](#ip-addresses)
-- [Numbers](#numbers)
-- [BigInts](#bigints)
-- [NaNs](#nans)
-- [Booleans](#booleans)
-- [Dates](#dates)
-- [Zod enums](#zod-enums)
-- [Native enums](#native-enums)
-- [Optionals](#optionals)
-- [Nullables](#nullables)
-- [Objects](#objects)
-  - [`.shape`](#shape)
-  - [`.keyof`](#keyof)
-  - [`.extend`](#extend)
-  - [`.merge`](#merge)
-  - [`.pick/.omit`](#pickomit)
-  - [`.partial`](#partial)
-  - [`.deepPartial`](#deeppartial)
-  - [`.required`](#required)
-  - [`.passthrough`](#passthrough)
-  - [`.strict`](#strict)
-  - [`.strip`](#strip)
-  - [`.catchall`](#catchall)
-- [Arrays](#arrays)
-  - [`.element`](#element)
-  - [`.nonempty`](#nonempty)
-  - [`.min/.max/.length`](#minmaxlength)
-- [Tuples](#tuples)
-- [Unions](#unions)
-- [Discriminated unions](#discriminated-unions)
-- [Records](#records)
-  - [Record key type](#record-key-type)
-- [Maps](#maps)
-- [Sets](#sets)
-- [Intersections](#intersections)
-- [Recursive types](#recursive-types)
-  - [ZodType with ZodEffects](#zodtype-with-zodeffects)
-  - [JSON type](#json-type)
-  - [Cyclical objects](#cyclical-objects)
-- [Promises](#promises)
-- [Instanceof](#instanceof)
-- [Functions](#functions)
-- [Preprocess](#preprocess)
-- [Custom schemas](#custom-schemas)
-- [Schema methods](#schema-methods)
-  - [`.parse`](#parse)
-  - [`.parseAsync`](#parseasync)
-  - [`.safeParse`](#safeparse)
-  - [`.safeParseAsync`](#safeparseasync)
-  - [`.refine`](#refine)
-    - [Arguments](#arguments)
-    - [Customize error path](#customize-error-path)
-    - [Asynchronous refinements](#asynchronous-refinements)
-    - [Relationship to transforms](#relationship-to-transforms)
-  - [`.superRefine`](#superrefine)
-    - [Abort early](#abort-early)
-    - [Type refinements](#type-refinements)
-  - [`.transform`](#transform)
-    - [Chaining order](#chaining-order)
-    - [Validating during transform](#validating-during-transform)
-    - [Relationship to refinements](#relationship-to-refinements)
-    - [Async transforms](#async-transforms)
-  - [`.default`](#default)
-  - [`.describe`](#describe)
-  - [`.catch`](#catch)
-  - [`.optional`](#optional)
-  - [`.nullable`](#nullable)
-  - [`.nullish`](#nullish)
-  - [`.array`](#array)
-  - [`.promise`](#promise)
-  - [`.or`](#or)
-  - [`.and`](#and)
-  - [`.brand`](#brand)
-  - [`.readonly`](#readonly)
-  - [`.pipe`](#pipe)
-    - [You can use `.pipe()` to fix common issues with `z.coerce`.](#you-can-use-pipe-to-fix-common-issues-with-zcoerce)
-- [Guides and concepts](#guides-and-concepts)
-  - [Type inference](#type-inference)
-  - [Writing generic functions](#writing-generic-functions)
-    - [Constraining allowable inputs](#constraining-allowable-inputs)
-  - [Error handling](#error-handling)
-  - [Error formatting](#error-formatting)
-- [Comparison](#comparison)
-  - [Joi](#joi)
-  - [Yup](#yup)
-  - [io-ts](#io-ts)
-  - [Runtypes](#runtypes)
-  - [Ow](#ow)
-- [Changelog](#changelog)
+-   [Table of contents](#table-of-contents)
+-   [Introduction](#introduction)
+    -   [Sponsors](#sponsors)
+        -   [Gold](#gold)
+        -   [Silver](#silver)
+        -   [Bronze](#bronze)
+    -   [Ecosystem](#ecosystem)
+        -   [Resources](#resources)
+        -   [API libraries](#api-libraries)
+        -   [Form integrations](#form-integrations)
+        -   [Zod to X](#zod-to-x)
+        -   [X to Zod](#x-to-zod)
+        -   [Mocking](#mocking)
+        -   [Powered by Zod](#powered-by-zod)
+        -   [Utilities for Zod](#utilities-for-zod)
+-   [Installation](#installation)
+    -   [Requirements](#requirements)
+    -   [From `npm` (Node/Bun)](#from-npm-nodebun)
+    -   [From `deno.land/x` (Deno)](#from-denolandx-deno)
+-   [Basic usage](#basic-usage)
+-   [Primitives](#primitives)
+-   [Coercion for primitives](#coercion-for-primitives)
+-   [Literals](#literals)
+-   [Strings](#strings)
+    -   [ISO datetimes](#iso-datetimes)
+    -   [IP addresses](#ip-addresses)
+-   [Numbers](#numbers)
+-   [BigInts](#bigints)
+-   [NaNs](#nans)
+-   [Booleans](#booleans)
+-   [Dates](#dates)
+-   [Zod enums](#zod-enums)
+-   [Native enums](#native-enums)
+-   [Optionals](#optionals)
+-   [Nullables](#nullables)
+-   [Objects](#objects)
+    -   [`.shape`](#shape)
+    -   [`.keyof`](#keyof)
+    -   [`.extend`](#extend)
+    -   [`.merge`](#merge)
+    -   [`.pick/.omit`](#pickomit)
+    -   [`.partial`](#partial)
+    -   [`.deepPartial`](#deeppartial)
+    -   [`.required`](#required)
+    -   [`.passthrough`](#passthrough)
+    -   [`.strict`](#strict)
+    -   [`.strip`](#strip)
+    -   [`.catchall`](#catchall)
+-   [Arrays](#arrays)
+    -   [`.element`](#element)
+    -   [`.nonempty`](#nonempty)
+    -   [`.min/.max/.length`](#minmaxlength)
+-   [Tuples](#tuples)
+-   [Unions](#unions)
+-   [Discriminated unions](#discriminated-unions)
+-   [Records](#records)
+    -   [Record key type](#record-key-type)
+-   [Maps](#maps)
+-   [Sets](#sets)
+-   [Intersections](#intersections)
+-   [Recursive types](#recursive-types)
+    -   [ZodType with ZodEffects](#zodtype-with-zodeffects)
+    -   [JSON type](#json-type)
+    -   [Cyclical objects](#cyclical-objects)
+-   [Promises](#promises)
+-   [Instanceof](#instanceof)
+-   [Functions](#functions)
+-   [Preprocess](#preprocess)
+-   [Custom schemas](#custom-schemas)
+-   [Schema methods](#schema-methods)
+    -   [`.parse`](#parse)
+    -   [`.parseAsync`](#parseasync)
+    -   [`.safeParse`](#safeparse)
+    -   [`.safeParseAsync`](#safeparseasync)
+    -   [`.refine`](#refine)
+        -   [Arguments](#arguments)
+        -   [Customize error path](#customize-error-path)
+        -   [Asynchronous refinements](#asynchronous-refinements)
+        -   [Relationship to transforms](#relationship-to-transforms)
+    -   [`.superRefine`](#superrefine)
+        -   [Abort early](#abort-early)
+        -   [Type refinements](#type-refinements)
+    -   [`.transform`](#transform)
+        -   [Chaining order](#chaining-order)
+        -   [Validating during transform](#validating-during-transform)
+        -   [Relationship to refinements](#relationship-to-refinements)
+        -   [Async transforms](#async-transforms)
+    -   [`.default`](#default)
+    -   [`.describe`](#describe)
+    -   [`.catch`](#catch)
+    -   [`.optional`](#optional)
+    -   [`.nullable`](#nullable)
+    -   [`.nullish`](#nullish)
+    -   [`.array`](#array)
+    -   [`.promise`](#promise)
+    -   [`.or`](#or)
+    -   [`.and`](#and)
+    -   [`.brand`](#brand)
+    -   [`.readonly`](#readonly)
+    -   [`.pipe`](#pipe)
+        -   [You can use `.pipe()` to fix common issues with `z.coerce`.](#you-can-use-pipe-to-fix-common-issues-with-zcoerce)
+-   [Guides and concepts](#guides-and-concepts)
+    -   [Type inference](#type-inference)
+    -   [Writing generic functions](#writing-generic-functions)
+        -   [Constraining allowable inputs](#constraining-allowable-inputs)
+    -   [Error handling](#error-handling)
+    -   [Error formatting](#error-formatting)
+-   [Comparison](#comparison)
+    -   [Joi](#joi)
+    -   [Yup](#yup)
+    -   [io-ts](#io-ts)
+    -   [Runtypes](#runtypes)
+    -   [Ow](#ow)
+-   [Changelog](#changelog)
 
 ## Introduction
 
@@ -168,13 +168,13 @@ Zod is designed to be as developer-friendly as possible. The goal is to eliminat
 
 Some other great aspects:
 
-- Zero dependencies
-- Works in Node.js and all modern browsers
-- Tiny: 8kb minified + zipped
-- Immutable: methods (e.g. `.optional()`) return a new instance
-- Concise, chainable interface
-- Functional approach: [parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
-- Works with plain JavaScript too! You don't need to use TypeScript.
+-   Zero dependencies
+-   Works in Node.js and all modern browsers
+-   Tiny: 8kb minified + zipped
+-   Immutable: methods (e.g. `.optional()`) return a new instance
+-   Concise, chainable interface
+-   Functional approach: [parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
+-   Works with plain JavaScript too! You don't need to use TypeScript.
 
 ### Sponsors
 
@@ -467,104 +467,104 @@ There are a growing number of tools that are built atop or support Zod natively!
 
 #### Resources
 
-- [Total TypeScript Zod Tutorial](https://www.totaltypescript.com/tutorials/zod) by [@mattpocockuk](https://twitter.com/mattpocockuk)
-- [Fixing TypeScript's Blindspot: Runtime Typechecking](https://www.youtube.com/watch?v=rY_XqfSHock) by [@jherr](https://twitter.com/jherr)
+-   [Total TypeScript Zod Tutorial](https://www.totaltypescript.com/tutorials/zod) by [@mattpocockuk](https://twitter.com/mattpocockuk)
+-   [Fixing TypeScript's Blindspot: Runtime Typechecking](https://www.youtube.com/watch?v=rY_XqfSHock) by [@jherr](https://twitter.com/jherr)
 
 #### API libraries
 
-- [`tRPC`](https://github.com/trpc/trpc): Build end-to-end typesafe APIs without GraphQL.
-- [`@anatine/zod-nestjs`](https://github.com/anatine/zod-plugins/tree/main/packages/zod-nestjs): Helper methods for using Zod in a NestJS project.
-- [`zod-endpoints`](https://github.com/flock-community/zod-endpoints): Contract-first strictly typed endpoints with Zod. OpenAPI compatible.
-- [`domain-functions`](https://github.com/SeasonedSoftware/domain-functions/): Decouple your business logic from your framework using composable functions. With first-class type inference from end to end powered by Zod schemas.
-- [`@zodios/core`](https://github.com/ecyrbe/zodios): A typescript API client with runtime and compile time validation backed by axios and zod.
-- [`express-zod-api`](https://github.com/RobinTail/express-zod-api): Build Express-based APIs with I/O schema validation and custom middlewares.
-- [`tapiduck`](https://github.com/sumukhbarve/monoduck/blob/main/src/tapiduck/README.md): End-to-end typesafe JSON APIs with Zod and Express; a bit like tRPC, but simpler.
-- [`koa-zod-router`](https://github.com/JakeFenley/koa-zod-router): Create typesafe routes in Koa with I/O validation using Zod.
+-   [`tRPC`](https://github.com/trpc/trpc): Build end-to-end typesafe APIs without GraphQL.
+-   [`@anatine/zod-nestjs`](https://github.com/anatine/zod-plugins/tree/main/packages/zod-nestjs): Helper methods for using Zod in a NestJS project.
+-   [`zod-endpoints`](https://github.com/flock-community/zod-endpoints): Contract-first strictly typed endpoints with Zod. OpenAPI compatible.
+-   [`domain-functions`](https://github.com/SeasonedSoftware/domain-functions/): Decouple your business logic from your framework using composable functions. With first-class type inference from end to end powered by Zod schemas.
+-   [`@zodios/core`](https://github.com/ecyrbe/zodios): A typescript API client with runtime and compile time validation backed by axios and zod.
+-   [`express-zod-api`](https://github.com/RobinTail/express-zod-api): Build Express-based APIs with I/O schema validation and custom middlewares.
+-   [`tapiduck`](https://github.com/sumukhbarve/monoduck/blob/main/src/tapiduck/README.md): End-to-end typesafe JSON APIs with Zod and Express; a bit like tRPC, but simpler.
+-   [`koa-zod-router`](https://github.com/JakeFenley/koa-zod-router): Create typesafe routes in Koa with I/O validation using Zod.
 
 #### Form integrations
 
-- [`conform`](https://conform.guide/api/zod): A progressive enhancement first form validation library for Remix and React Router
-- [`react-hook-form`](https://github.com/react-hook-form/resolvers#zod): A first-party Zod resolver for React Hook Form.
-- [`zod-validation-error`](https://github.com/causaly/zod-validation-error): Generate user-friendly error messages from `ZodError`s.
-- [`zod-formik-adapter`](https://github.com/robertLichtnow/zod-formik-adapter): A community-maintained Formik adapter for Zod.
-- [`react-zorm`](https://github.com/esamattis/react-zorm): Standalone `<form>` generation and validation for React using Zod.
-- [`zodix`](https://github.com/rileytomasek/zodix): Zod utilities for FormData and URLSearchParams in Remix loaders and actions.
-- [`remix-params-helper`](https://github.com/kiliman/remix-params-helper): Simplify integration of Zod with standard URLSearchParams and FormData for Remix apps.
-- [`formik-validator-zod`](https://github.com/glazy/formik-validator-zod): Formik-compliant validator library that simplifies using Zod with Formik.
-- [`zod-i18n-map`](https://github.com/aiji42/zod-i18n): Useful for translating Zod error messages.
-- [`@modular-forms/solid`](https://github.com/fabian-hiller/modular-forms): Modular form library for SolidJS that supports Zod for validation.
-- [`houseform`](https://github.com/crutchcorn/houseform/): A React form library that uses Zod for validation.
-- [`sveltekit-superforms`](https://github.com/ciscoheat/sveltekit-superforms): Supercharged form library for SvelteKit with Zod validation.
-- [`mobx-zod-form`](https://github.com/MonoidDev/mobx-zod-form): Data-first form builder based on MobX & Zod.
-- [`@vee-validate/zod`](https://github.com/logaretm/vee-validate/tree/main/packages/zod): Form library for Vue.js with Zod schema validation.
+-   [`conform`](https://conform.guide/api/zod): A progressive enhancement first form validation library for Remix and React Router
+-   [`react-hook-form`](https://github.com/react-hook-form/resolvers#zod): A first-party Zod resolver for React Hook Form.
+-   [`zod-validation-error`](https://github.com/causaly/zod-validation-error): Generate user-friendly error messages from `ZodError`s.
+-   [`zod-formik-adapter`](https://github.com/robertLichtnow/zod-formik-adapter): A community-maintained Formik adapter for Zod.
+-   [`react-zorm`](https://github.com/esamattis/react-zorm): Standalone `<form>` generation and validation for React using Zod.
+-   [`zodix`](https://github.com/rileytomasek/zodix): Zod utilities for FormData and URLSearchParams in Remix loaders and actions.
+-   [`remix-params-helper`](https://github.com/kiliman/remix-params-helper): Simplify integration of Zod with standard URLSearchParams and FormData for Remix apps.
+-   [`formik-validator-zod`](https://github.com/glazy/formik-validator-zod): Formik-compliant validator library that simplifies using Zod with Formik.
+-   [`zod-i18n-map`](https://github.com/aiji42/zod-i18n): Useful for translating Zod error messages.
+-   [`@modular-forms/solid`](https://github.com/fabian-hiller/modular-forms): Modular form library for SolidJS that supports Zod for validation.
+-   [`houseform`](https://github.com/crutchcorn/houseform/): A React form library that uses Zod for validation.
+-   [`sveltekit-superforms`](https://github.com/ciscoheat/sveltekit-superforms): Supercharged form library for SvelteKit with Zod validation.
+-   [`mobx-zod-form`](https://github.com/MonoidDev/mobx-zod-form): Data-first form builder based on MobX & Zod.
+-   [`@vee-validate/zod`](https://github.com/logaretm/vee-validate/tree/main/packages/zod): Form library for Vue.js with Zod schema validation.
 
 #### Zod to X
 
-- [`zod-to-ts`](https://github.com/sachinraja/zod-to-ts): Generate TypeScript definitions from Zod schemas.
-- [`zod-to-json-schema`](https://github.com/StefanTerdell/zod-to-json-schema): Convert your Zod schemas into [JSON Schemas](https://json-schema.org/).
-- [`@anatine/zod-openapi`](https://github.com/anatine/zod-plugins/tree/main/packages/zod-openapi): Converts a Zod schema to an OpenAPI v3.x `SchemaObject`.
-- [`zod-fast-check`](https://github.com/DavidTimms/zod-fast-check): Generate `fast-check` arbitraries from Zod schemas.
-- [`zod-dto`](https://github.com/kbkk/abitia/tree/master/packages/zod-dto): Generate Nest.js DTOs from a Zod schema.
-- [`fastify-type-provider-zod`](https://github.com/turkerdev/fastify-type-provider-zod): Create Fastify type providers from Zod schemas.
-- [`zod-to-openapi`](https://github.com/asteasolutions/zod-to-openapi): Generate full OpenAPI (Swagger) docs from Zod, including schemas, endpoints & parameters.
-- [`nestjs-graphql-zod`](https://github.com/incetarik/nestjs-graphql-zod): Generates NestJS GraphQL model classes from Zod schemas. Provides GraphQL method decorators working with Zod schemas.
-- [`zod-openapi`](https://github.com/samchungy/zod-openapi): Create full OpenAPI v3.x documentation from Zod schemas.
-- [`fastify-zod-openapi`](https://github.com/samchungy/fastify-zod-openapi): Fastify type provider, validation, serialization and @fastify/swagger support for Zod schemas.
-- [`typeschema`](https://typeschema.com/): Universal adapter for schema validation.
+-   [`zod-to-ts`](https://github.com/sachinraja/zod-to-ts): Generate TypeScript definitions from Zod schemas.
+-   [`zod-to-json-schema`](https://github.com/StefanTerdell/zod-to-json-schema): Convert your Zod schemas into [JSON Schemas](https://json-schema.org/).
+-   [`@anatine/zod-openapi`](https://github.com/anatine/zod-plugins/tree/main/packages/zod-openapi): Converts a Zod schema to an OpenAPI v3.x `SchemaObject`.
+-   [`zod-fast-check`](https://github.com/DavidTimms/zod-fast-check): Generate `fast-check` arbitraries from Zod schemas.
+-   [`zod-dto`](https://github.com/kbkk/abitia/tree/master/packages/zod-dto): Generate Nest.js DTOs from a Zod schema.
+-   [`fastify-type-provider-zod`](https://github.com/turkerdev/fastify-type-provider-zod): Create Fastify type providers from Zod schemas.
+-   [`zod-to-openapi`](https://github.com/asteasolutions/zod-to-openapi): Generate full OpenAPI (Swagger) docs from Zod, including schemas, endpoints & parameters.
+-   [`nestjs-graphql-zod`](https://github.com/incetarik/nestjs-graphql-zod): Generates NestJS GraphQL model classes from Zod schemas. Provides GraphQL method decorators working with Zod schemas.
+-   [`zod-openapi`](https://github.com/samchungy/zod-openapi): Create full OpenAPI v3.x documentation from Zod schemas.
+-   [`fastify-zod-openapi`](https://github.com/samchungy/fastify-zod-openapi): Fastify type provider, validation, serialization and @fastify/swagger support for Zod schemas.
+-   [`typeschema`](https://typeschema.com/): Universal adapter for schema validation.
 
 #### X to Zod
 
-- [`ts-to-zod`](https://github.com/fabien0102/ts-to-zod): Convert TypeScript definitions into Zod schemas.
-- [`@runtyping/zod`](https://github.com/johngeorgewright/runtyping/tree/master/packages/zod): Generate Zod from static types & JSON schema.
-- [`json-schema-to-zod`](https://github.com/StefanTerdell/json-schema-to-zod): Convert your [JSON Schemas](https://json-schema.org/) into Zod schemas. [Live demo](https://StefanTerdell.github.io/json-schema-to-zod-react/).
-- [`json-to-zod`](https://github.com/rsinohara/json-to-zod): Convert JSON objects into Zod schemas. [Live demo](https://rsinohara.github.io/json-to-zod-react/).
-- [`graphql-codegen-typescript-validation-schema`](https://github.com/Code-Hex/graphql-codegen-typescript-validation-schema): GraphQL Code Generator plugin to generate form validation schema from your GraphQL schema.
-- [`zod-prisma`](https://github.com/CarterGrimmeisen/zod-prisma): Generate Zod schemas from your Prisma schema.
-- [`Supervillain`](https://github.com/Southclaws/supervillain): Generate Zod schemas from your Go structs.
-- [`prisma-zod-generator`](https://github.com/omar-dulaimi/prisma-zod-generator): Emit Zod schemas from your Prisma schema.
-- [`prisma-trpc-generator`](https://github.com/omar-dulaimi/prisma-trpc-generator): Emit fully implemented tRPC routers and their validation schemas using Zod.
-- [`zod-prisma-types`](https://github.com/chrishoermann/zod-prisma-types) Create Zod types from your Prisma models.
-- [`quicktype`](https://app.quicktype.io/): Convert JSON objects and JSON schemas into Zod schemas.
-- [`@sanity-typed/zod`](https://github.com/saiichihashimoto/sanity-typed/tree/main/packages/zod): Generate Zod Schemas from [Sanity Schemas](https://www.sanity.io/docs/schema-types).
+-   [`ts-to-zod`](https://github.com/fabien0102/ts-to-zod): Convert TypeScript definitions into Zod schemas.
+-   [`@runtyping/zod`](https://github.com/johngeorgewright/runtyping/tree/master/packages/zod): Generate Zod from static types & JSON schema.
+-   [`json-schema-to-zod`](https://github.com/StefanTerdell/json-schema-to-zod): Convert your [JSON Schemas](https://json-schema.org/) into Zod schemas. [Live demo](https://StefanTerdell.github.io/json-schema-to-zod-react/).
+-   [`json-to-zod`](https://github.com/rsinohara/json-to-zod): Convert JSON objects into Zod schemas. [Live demo](https://rsinohara.github.io/json-to-zod-react/).
+-   [`graphql-codegen-typescript-validation-schema`](https://github.com/Code-Hex/graphql-codegen-typescript-validation-schema): GraphQL Code Generator plugin to generate form validation schema from your GraphQL schema.
+-   [`zod-prisma`](https://github.com/CarterGrimmeisen/zod-prisma): Generate Zod schemas from your Prisma schema.
+-   [`Supervillain`](https://github.com/Southclaws/supervillain): Generate Zod schemas from your Go structs.
+-   [`prisma-zod-generator`](https://github.com/omar-dulaimi/prisma-zod-generator): Emit Zod schemas from your Prisma schema.
+-   [`prisma-trpc-generator`](https://github.com/omar-dulaimi/prisma-trpc-generator): Emit fully implemented tRPC routers and their validation schemas using Zod.
+-   [`zod-prisma-types`](https://github.com/chrishoermann/zod-prisma-types) Create Zod types from your Prisma models.
+-   [`quicktype`](https://app.quicktype.io/): Convert JSON objects and JSON schemas into Zod schemas.
+-   [`@sanity-typed/zod`](https://github.com/saiichihashimoto/sanity-typed/tree/main/packages/zod): Generate Zod Schemas from [Sanity Schemas](https://www.sanity.io/docs/schema-types).
 
 #### Mocking
 
-- [`@anatine/zod-mock`](https://github.com/anatine/zod-plugins/tree/main/packages/zod-mock): Generate mock data from a Zod schema. Powered by [faker.js](https://github.com/faker-js/faker).
-- [`zod-mocking`](https://github.com/dipasqualew/zod-mocking): Generate mock data from your Zod schemas.
-- [`zod-fixture`](https://github.com/timdeschryver/zod-fixture): Use your zod schemas to automate the generation of non-relevant test fixtures in a deterministic way.
-- [`zocker`](https://zocker.sigrist.dev): Generate plausible mock-data from your schemas.
-- [`zodock`](https://github.com/ItMaga/zodock) Generate mock data based on Zod schemas.
+-   [`@anatine/zod-mock`](https://github.com/anatine/zod-plugins/tree/main/packages/zod-mock): Generate mock data from a Zod schema. Powered by [faker.js](https://github.com/faker-js/faker).
+-   [`zod-mocking`](https://github.com/dipasqualew/zod-mocking): Generate mock data from your Zod schemas.
+-   [`zod-fixture`](https://github.com/timdeschryver/zod-fixture): Use your zod schemas to automate the generation of non-relevant test fixtures in a deterministic way.
+-   [`zocker`](https://zocker.sigrist.dev): Generate plausible mock-data from your schemas.
+-   [`zodock`](https://github.com/ItMaga/zodock) Generate mock data based on Zod schemas.
 
 #### Powered by Zod
 
-- [`freerstore`](https://github.com/JacobWeisenburger/freerstore): Firestore cost optimizer.
-- [`slonik`](https://github.com/gajus/slonik/tree/gajus/add-zod-validation-backwards-compatible#runtime-validation-and-static-type-inference): Node.js Postgres client with strong Zod integration.
-- [`soly`](https://github.com/mdbetancourt/soly): Create CLI applications with zod.
-- [`zod-xlsx`](https://github.com/sidwebworks/zod-xlsx): A xlsx based resource validator using Zod schemas.
-- [`znv`](https://github.com/lostfictions/znv): Type-safe environment parsing and validation for Node.js with Zod schemas.
+-   [`freerstore`](https://github.com/JacobWeisenburger/freerstore): Firestore cost optimizer.
+-   [`slonik`](https://github.com/gajus/slonik/tree/gajus/add-zod-validation-backwards-compatible#runtime-validation-and-static-type-inference): Node.js Postgres client with strong Zod integration.
+-   [`soly`](https://github.com/mdbetancourt/soly): Create CLI applications with zod.
+-   [`zod-xlsx`](https://github.com/sidwebworks/zod-xlsx): A xlsx based resource validator using Zod schemas.
+-   [`znv`](https://github.com/lostfictions/znv): Type-safe environment parsing and validation for Node.js with Zod schemas.
 
 #### Utilities for Zod
 
-- [`zod_utilz`](https://github.com/JacobWeisenburger/zod_utilz): Framework agnostic utilities for Zod.
-- [`zod-sandbox`](https://github.com/nereumelo/zod-sandbox): Controlled environment for testing zod schemas. [Live demo](https://zod-sandbox.vercel.app/).
+-   [`zod_utilz`](https://github.com/JacobWeisenburger/zod_utilz): Framework agnostic utilities for Zod.
+-   [`zod-sandbox`](https://github.com/nereumelo/zod-sandbox): Controlled environment for testing zod schemas. [Live demo](https://zod-sandbox.vercel.app/).
 
 ## Installation
 
 ### Requirements
 
-- TypeScript 4.5+!
-- You must enable `strict` mode in your `tsconfig.json`. This is a best practice for all TypeScript projects.
+-   TypeScript 4.5+!
+-   You must enable `strict` mode in your `tsconfig.json`. This is a best practice for all TypeScript projects.
 
-  ```ts
-  // tsconfig.json
-  {
-    // ...
-    "compilerOptions": {
+    ```ts
+    // tsconfig.json
+    {
       // ...
-      "strict": true
+      "compilerOptions": {
+        // ...
+        "strict": true
+      }
     }
-  }
-  ```
+    ```
 
 ### From `npm` (Node/Bun)
 
@@ -589,13 +589,13 @@ pnpm add zod@canary          # pnpm
 Unlike Node, Deno relies on direct URL imports instead of a package manager like NPM. Zod is available on [deno.land/x](https://deno.land/x). The latest version can be imported like so:
 
 ```ts
-import { z } from "https://deno.land/x/zod/mod.ts";
+import { z } from "https://deno.land/x/zod/mod.ts"
 ```
 
 You can also specify a particular version:
 
 ```ts
-import { z } from "https://deno.land/x/zod@v3.16.1/mod.ts";
+import { z } from "https://deno.land/x/zod@v3.16.1/mod.ts"
 ```
 
 > The rest of this README assumes you are using npm and importing directly from the `"zod"` package.
@@ -605,62 +605,62 @@ import { z } from "https://deno.land/x/zod@v3.16.1/mod.ts";
 Creating a simple string schema
 
 ```ts
-import { z } from "zod";
+import { z } from "zod"
 
 // creating a schema for strings
-const mySchema = z.string();
+const mySchema = z.string()
 
 // parsing
-mySchema.parse("tuna"); // => "tuna"
-mySchema.parse(12); // => throws ZodError
+mySchema.parse("tuna") // => "tuna"
+mySchema.parse(12) // => throws ZodError
 
 // "safe" parsing (doesn't throw error if validation fails)
-mySchema.safeParse("tuna"); // => { success: true; data: "tuna" }
-mySchema.safeParse(12); // => { success: false; error: ZodError }
+mySchema.safeParse("tuna") // => { success: true; data: "tuna" }
+mySchema.safeParse(12) // => { success: false; error: ZodError }
 ```
 
 Creating an object schema
 
 ```ts
-import { z } from "zod";
+import { z } from "zod"
 
 const User = z.object({
-  username: z.string(),
-});
+    username: z.string(),
+})
 
-User.parse({ username: "Ludwig" });
+User.parse({ username: "Ludwig" })
 
 // extract the inferred type
-type User = z.infer<typeof User>;
+type User = z.infer<typeof User>
 // { username: string }
 ```
 
 ## Primitives
 
 ```ts
-import { z } from "zod";
+import { z } from "zod"
 
 // primitive values
-z.string();
-z.number();
-z.bigint();
-z.boolean();
-z.date();
-z.symbol();
+z.string()
+z.number()
+z.bigint()
+z.boolean()
+z.date()
+z.symbol()
 
 // empty types
-z.undefined();
-z.null();
-z.void(); // accepts undefined
+z.undefined()
+z.null()
+z.void() // accepts undefined
 
 // catch-all types
 // allows any value
-z.any();
-z.unknown();
+z.any()
+z.unknown()
 
 // never type
 // allows no values
-z.never();
+z.never()
 ```
 
 ## Coercion for primitives
@@ -668,26 +668,26 @@ z.never();
 Zod now provides a more convenient way to coerce primitive values.
 
 ```ts
-const schema = z.coerce.string();
-schema.parse("tuna"); // => "tuna"
-schema.parse(12); // => "12"
-schema.parse(true); // => "true"
+const schema = z.coerce.string()
+schema.parse("tuna") // => "tuna"
+schema.parse(12) // => "12"
+schema.parse(true) // => "true"
 ```
 
 During the parsing step, the input is passed through the `String()` function, which is a JavaScript built-in for coercing data into strings. Note that the returned schema is a `ZodString` instance so you can use all string methods.
 
 ```ts
-z.coerce.string().email().min(5);
+z.coerce.string().email().min(5)
 ```
 
 All primitive types support coercion.
 
 ```ts
-z.coerce.string(); // String(input)
-z.coerce.number(); // Number(input)
-z.coerce.boolean(); // Boolean(input)
-z.coerce.bigint(); // BigInt(input)
-z.coerce.date(); // new Date(input)
+z.coerce.string() // String(input)
+z.coerce.number() // Number(input)
+z.coerce.boolean() // Boolean(input)
+z.coerce.bigint() // BigInt(input)
+z.coerce.date() // new Date(input)
 ```
 
 **Boolean coercion**
@@ -695,15 +695,15 @@ z.coerce.date(); // new Date(input)
 Zod's boolean coercion is very simple! It passes the value into the `Boolean(value)` function, that's it. Any truthy value will resolve to `true`, any falsy value will resolve to `false`.
 
 ```ts
-z.coerce.boolean().parse("tuna"); // => true
-z.coerce.boolean().parse("true"); // => true
-z.coerce.boolean().parse("false"); // => true
-z.coerce.boolean().parse(1); // => true
-z.coerce.boolean().parse([]); // => true
+z.coerce.boolean().parse("tuna") // => true
+z.coerce.boolean().parse("true") // => true
+z.coerce.boolean().parse("false") // => true
+z.coerce.boolean().parse(1) // => true
+z.coerce.boolean().parse([]) // => true
 
-z.coerce.boolean().parse(0); // => false
-z.coerce.boolean().parse(undefined); // => false
-z.coerce.boolean().parse(null); // => false
+z.coerce.boolean().parse(0) // => false
+z.coerce.boolean().parse(undefined) // => false
+z.coerce.boolean().parse(null) // => false
 ```
 
 ## Literals
@@ -711,16 +711,16 @@ z.coerce.boolean().parse(null); // => false
 Literal schemas represent a [literal type](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#literal-types), like `"hello world"` or `5`.
 
 ```ts
-const tuna = z.literal("tuna");
-const twelve = z.literal(12);
-const twobig = z.literal(2n); // bigint literal
-const tru = z.literal(true);
+const tuna = z.literal("tuna")
+const twelve = z.literal(12)
+const twobig = z.literal(2n) // bigint literal
+const tru = z.literal(true)
 
-const terrificSymbol = Symbol("terrific");
-const terrific = z.literal(terrificSymbol);
+const terrificSymbol = Symbol("terrific")
+const terrific = z.literal(terrificSymbol)
 
 // retrieve literal value
-tuna.value; // "tuna"
+tuna.value // "tuna"
 ```
 
 > Currently there is no support for Date literals in Zod. If you have a use case for this feature, please file an issue.
@@ -731,27 +731,27 @@ Zod includes a handful of string-specific validations.
 
 ```ts
 // validations
-z.string().max(5);
-z.string().min(5);
-z.string().length(5);
-z.string().email();
-z.string().url();
-z.string().emoji();
-z.string().uuid();
-z.string().cuid();
-z.string().cuid2();
-z.string().ulid();
-z.string().regex(regex);
-z.string().includes(string);
-z.string().startsWith(string);
-z.string().endsWith(string);
-z.string().datetime(); // ISO 8601; default is without UTC offset, see below for options
-z.string().ip(); // defaults to IPv4 and IPv6, see below for options
+z.string().max(5)
+z.string().min(5)
+z.string().length(5)
+z.string().email()
+z.string().url()
+z.string().emoji()
+z.string().uuid()
+z.string().cuid()
+z.string().cuid2()
+z.string().ulid()
+z.string().regex(regex)
+z.string().includes(string)
+z.string().startsWith(string)
+z.string().endsWith(string)
+z.string().datetime() // ISO 8601; default is without UTC offset, see below for options
+z.string().ip() // defaults to IPv4 and IPv6, see below for options
 
 // transformations
-z.string().trim(); // trim whitespace
-z.string().toLowerCase(); // toLowerCase
-z.string().toUpperCase(); // toUpperCase
+z.string().trim() // trim whitespace
+z.string().toLowerCase() // toLowerCase
+z.string().toUpperCase() // toUpperCase
 ```
 
 > Check out [validator.js](https://github.com/validatorjs/validator.js) for a bunch of other useful string validation functions that can be used in conjunction with [Refinements](#refine).
@@ -760,26 +760,26 @@ You can customize some common error messages when creating a string schema.
 
 ```ts
 const name = z.string({
-  required_error: "Name is required",
-  invalid_type_error: "Name must be a string",
-});
+    required_error: "Name is required",
+    invalid_type_error: "Name must be a string",
+})
 ```
 
 When using validation methods, you can pass in an additional argument to provide a custom error message.
 
 ```ts
-z.string().min(5, { message: "Must be 5 or more characters long" });
-z.string().max(5, { message: "Must be 5 or fewer characters long" });
-z.string().length(5, { message: "Must be exactly 5 characters long" });
-z.string().email({ message: "Invalid email address" });
-z.string().url({ message: "Invalid url" });
-z.string().emoji({ message: "Contains non-emoji characters" });
-z.string().uuid({ message: "Invalid UUID" });
-z.string().includes("tuna", { message: "Must include tuna" });
-z.string().startsWith("https://", { message: "Must provide secure URL" });
-z.string().endsWith(".com", { message: "Only .com domains allowed" });
-z.string().datetime({ message: "Invalid datetime string! Must be UTC." });
-z.string().ip({ message: "Invalid IP address" });
+z.string().min(5, { message: "Must be 5 or more characters long" })
+z.string().max(5, { message: "Must be 5 or fewer characters long" })
+z.string().length(5, { message: "Must be exactly 5 characters long" })
+z.string().email({ message: "Invalid email address" })
+z.string().url({ message: "Invalid url" })
+z.string().emoji({ message: "Contains non-emoji characters" })
+z.string().uuid({ message: "Invalid UUID" })
+z.string().includes("tuna", { message: "Must include tuna" })
+z.string().startsWith("https://", { message: "Must provide secure URL" })
+z.string().endsWith(".com", { message: "Only .com domains allowed" })
+z.string().datetime({ message: "Invalid datetime string! Must be UTC." })
+z.string().ip({ message: "Invalid IP address" })
 ```
 
 ### ISO datetimes
@@ -787,34 +787,34 @@ z.string().ip({ message: "Invalid IP address" });
 The `z.string().datetime()` method enforces ISO 8601; default is no timezone offsets and arbitrary sub-second decimal precision.
 
 ```ts
-const datetime = z.string().datetime();
+const datetime = z.string().datetime()
 
-datetime.parse("2020-01-01T00:00:00Z"); // pass
-datetime.parse("2020-01-01T00:00:00.123Z"); // pass
-datetime.parse("2020-01-01T00:00:00.123456Z"); // pass (arbitrary precision)
-datetime.parse("2020-01-01T00:00:00+02:00"); // fail (no offsets allowed)
+datetime.parse("2020-01-01T00:00:00Z") // pass
+datetime.parse("2020-01-01T00:00:00.123Z") // pass
+datetime.parse("2020-01-01T00:00:00.123456Z") // pass (arbitrary precision)
+datetime.parse("2020-01-01T00:00:00+02:00") // fail (no offsets allowed)
 ```
 
 Timezone offsets can be allowed by setting the `offset` option to `true`.
 
 ```ts
-const datetime = z.string().datetime({ offset: true });
+const datetime = z.string().datetime({ offset: true })
 
-datetime.parse("2020-01-01T00:00:00+02:00"); // pass
-datetime.parse("2020-01-01T00:00:00.123+02:00"); // pass (millis optional)
-datetime.parse("2020-01-01T00:00:00.123+0200"); // pass (millis optional)
-datetime.parse("2020-01-01T00:00:00.123+02"); // pass (only offset hours)
-datetime.parse("2020-01-01T00:00:00Z"); // pass (Z still supported)
+datetime.parse("2020-01-01T00:00:00+02:00") // pass
+datetime.parse("2020-01-01T00:00:00.123+02:00") // pass (millis optional)
+datetime.parse("2020-01-01T00:00:00.123+0200") // pass (millis optional)
+datetime.parse("2020-01-01T00:00:00.123+02") // pass (only offset hours)
+datetime.parse("2020-01-01T00:00:00Z") // pass (Z still supported)
 ```
 
 You can additionally constrain the allowable `precision`. By default, arbitrary sub-second precision is supported (but optional).
 
 ```ts
-const datetime = z.string().datetime({ precision: 3 });
+const datetime = z.string().datetime({ precision: 3 })
 
-datetime.parse("2020-01-01T00:00:00.123Z"); // pass
-datetime.parse("2020-01-01T00:00:00Z"); // fail
-datetime.parse("2020-01-01T00:00:00.123456Z"); // fail
+datetime.parse("2020-01-01T00:00:00.123Z") // pass
+datetime.parse("2020-01-01T00:00:00Z") // fail
+datetime.parse("2020-01-01T00:00:00.123456Z") // fail
 ```
 
 ### IP addresses
@@ -822,24 +822,24 @@ datetime.parse("2020-01-01T00:00:00.123456Z"); // fail
 The `z.string().ip()` method by default validate IPv4 and IPv6.
 
 ```ts
-const ip = z.string().ip();
+const ip = z.string().ip()
 
-ip.parse("192.168.1.1"); // pass
-ip.parse("84d5:51a0:9114:1855:4cfa:f2d7:1f12:7003"); // pass
-ip.parse("84d5:51a0:9114:1855:4cfa:f2d7:1f12:192.168.1.1"); // pass
+ip.parse("192.168.1.1") // pass
+ip.parse("84d5:51a0:9114:1855:4cfa:f2d7:1f12:7003") // pass
+ip.parse("84d5:51a0:9114:1855:4cfa:f2d7:1f12:192.168.1.1") // pass
 
-ip.parse("256.1.1.1"); // fail
-ip.parse("84d5:51a0:9114:gggg:4cfa:f2d7:1f12:7003"); // fail
+ip.parse("256.1.1.1") // fail
+ip.parse("84d5:51a0:9114:gggg:4cfa:f2d7:1f12:7003") // fail
 ```
 
 You can additionally set the IP `version`.
 
 ```ts
-const ipv4 = z.string().ip({ version: "v4" });
-ipv4.parse("84d5:51a0:9114:1855:4cfa:f2d7:1f12:7003"); // fail
+const ipv4 = z.string().ip({ version: "v4" })
+ipv4.parse("84d5:51a0:9114:1855:4cfa:f2d7:1f12:7003") // fail
 
-const ipv6 = z.string().ip({ version: "v6" });
-ipv6.parse("192.168.1.1"); // fail
+const ipv6 = z.string().ip({ version: "v6" })
+ipv6.parse("192.168.1.1") // fail
 ```
 
 ## Numbers
@@ -848,36 +848,36 @@ You can customize certain error messages when creating a number schema.
 
 ```ts
 const age = z.number({
-  required_error: "Age is required",
-  invalid_type_error: "Age must be a number",
-});
+    required_error: "Age is required",
+    invalid_type_error: "Age must be a number",
+})
 ```
 
 Zod includes a handful of number-specific validations.
 
 ```ts
-z.number().gt(5);
-z.number().gte(5); // alias .min(5)
-z.number().lt(5);
-z.number().lte(5); // alias .max(5)
+z.number().gt(5)
+z.number().gte(5) // alias .min(5)
+z.number().lt(5)
+z.number().lte(5) // alias .max(5)
 
-z.number().int(); // value must be an integer
+z.number().int() // value must be an integer
 
-z.number().positive(); //     > 0
-z.number().nonnegative(); //  >= 0
-z.number().negative(); //     < 0
-z.number().nonpositive(); //  <= 0
+z.number().positive() //     > 0
+z.number().nonnegative() //  >= 0
+z.number().negative() //     < 0
+z.number().nonpositive() //  <= 0
 
-z.number().multipleOf(5); // Evenly divisible by 5. Alias .step(5)
+z.number().multipleOf(5) // Evenly divisible by 5. Alias .step(5)
 
-z.number().finite(); // value must be finite, not Infinity or -Infinity
-z.number().safe(); // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER
+z.number().finite() // value must be finite, not Infinity or -Infinity
+z.number().safe() // value must be between Number.MIN_SAFE_INTEGER and Number.MAX_SAFE_INTEGER
 ```
 
 Optionally, you can pass in a second argument to provide a custom error message.
 
 ```ts
-z.number().lte(5, { message: "this👏is👏too👏big" });
+z.number().lte(5, { message: "this👏is👏too👏big" })
 ```
 
 ## BigInts
@@ -885,17 +885,17 @@ z.number().lte(5, { message: "this👏is👏too👏big" });
 Zod includes a handful of bigint-specific validations.
 
 ```ts
-z.bigint().gt(5n);
-z.bigint().gte(5n); // alias `.min(5n)`
-z.bigint().lt(5n);
-z.bigint().lte(5n); // alias `.max(5n)`
+z.bigint().gt(5n)
+z.bigint().gte(5n) // alias `.min(5n)`
+z.bigint().lt(5n)
+z.bigint().lte(5n) // alias `.max(5n)`
 
-z.bigint().positive(); // > 0n
-z.bigint().nonnegative(); // >= 0n
-z.bigint().negative(); // < 0n
-z.bigint().nonpositive(); // <= 0n
+z.bigint().positive() // > 0n
+z.bigint().nonnegative() // >= 0n
+z.bigint().negative() // < 0n
+z.bigint().nonpositive() // <= 0n
 
-z.bigint().multipleOf(5n); // Evenly divisible by 5n.
+z.bigint().multipleOf(5n) // Evenly divisible by 5n.
 ```
 
 ## NaNs
@@ -904,9 +904,9 @@ You can customize certain error messages when creating a nan schema.
 
 ```ts
 const isNaN = z.nan({
-  required_error: "isNaN is required",
-  invalid_type_error: "isNaN must be not a number",
-});
+    required_error: "isNaN is required",
+    invalid_type_error: "isNaN must be not a number",
+})
 ```
 
 ## Booleans
@@ -915,9 +915,9 @@ You can customize certain error messages when creating a boolean schema.
 
 ```ts
 const isActive = z.boolean({
-  required_error: "isActive is required",
-  invalid_type_error: "isActive must be a boolean",
-});
+    required_error: "isActive is required",
+    invalid_type_error: "isActive must be a boolean",
+})
 ```
 
 ## Dates
@@ -925,24 +925,24 @@ const isActive = z.boolean({
 Use z.date() to validate `Date` instances.
 
 ```ts
-z.date().safeParse(new Date()); // success: true
-z.date().safeParse("2022-01-12T00:00:00.000Z"); // success: false
+z.date().safeParse(new Date()) // success: true
+z.date().safeParse("2022-01-12T00:00:00.000Z") // success: false
 ```
 
 You can customize certain error messages when creating a date schema.
 
 ```ts
 const myDateSchema = z.date({
-  required_error: "Please select a date and time",
-  invalid_type_error: "That's not a date!",
-});
+    required_error: "Please select a date and time",
+    invalid_type_error: "That's not a date!",
+})
 ```
 
 Zod provides a handful of date-specific validations.
 
 ```ts
-z.date().min(new Date("1900-01-01"), { message: "Too old" });
-z.date().max(new Date(), { message: "Too young!" });
+z.date().min(new Date("1900-01-01"), { message: "Too old" })
+z.date().max(new Date(), { message: "Too young!" })
 ```
 
 **Coercion to Date**
@@ -950,19 +950,19 @@ z.date().max(new Date(), { message: "Too young!" });
 Since [zod 3.20](https://github.com/colinhacks/zod/releases/tag/v3.20), use [`z.coerce.date()`](#coercion-for-primitives) to pass the input through `new Date(input)`.
 
 ```ts
-const dateSchema = z.coerce.date();
-type DateSchema = z.infer<typeof dateSchema>;
+const dateSchema = z.coerce.date()
+type DateSchema = z.infer<typeof dateSchema>
 // type DateSchema = Date
 
 /* valid dates */
-console.log(dateSchema.safeParse("2023-01-10T00:00:00.000Z").success); // true
-console.log(dateSchema.safeParse("2023-01-10").success); // true
-console.log(dateSchema.safeParse("1/10/23").success); // true
-console.log(dateSchema.safeParse(new Date("1/10/23")).success); // true
+console.log(dateSchema.safeParse("2023-01-10T00:00:00.000Z").success) // true
+console.log(dateSchema.safeParse("2023-01-10").success) // true
+console.log(dateSchema.safeParse("1/10/23").success) // true
+console.log(dateSchema.safeParse(new Date("1/10/23")).success) // true
 
 /* invalid dates */
-console.log(dateSchema.safeParse("2023-13-10").success); // false
-console.log(dateSchema.safeParse("0000-00-00").success); // false
+console.log(dateSchema.safeParse("2023-13-10").success) // false
+console.log(dateSchema.safeParse("0000-00-00").success) // false
 ```
 
 For older zod versions, use [`z.preprocess`](#preprocess) like [described in this thread](https://github.com/colinhacks/zod/discussions/879#discussioncomment-2036276).
@@ -970,23 +970,23 @@ For older zod versions, use [`z.preprocess`](#preprocess) like [described in thi
 ## Zod enums
 
 ```ts
-const FishEnum = z.enum(["Salmon", "Tuna", "Trout"]);
-type FishEnum = z.infer<typeof FishEnum>;
+const FishEnum = z.enum(["Salmon", "Tuna", "Trout"])
+type FishEnum = z.infer<typeof FishEnum>
 // 'Salmon' | 'Tuna' | 'Trout'
 ```
 
 `z.enum` is a Zod-native way to declare a schema with a fixed set of allowable _string_ values. Pass the array of values directly into `z.enum()`. Alternatively, use `as const` to define your enum values as a tuple of strings. See the [const assertion docs](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-4.html#const-assertions) for details.
 
 ```ts
-const VALUES = ["Salmon", "Tuna", "Trout"] as const;
-const FishEnum = z.enum(VALUES);
+const VALUES = ["Salmon", "Tuna", "Trout"] as const
+const FishEnum = z.enum(VALUES)
 ```
 
 This is not allowed, since Zod isn't able to infer the exact values of each element.
 
 ```ts
-const fish = ["Salmon", "Tuna", "Trout"];
-const FishEnum = z.enum(fish);
+const fish = ["Salmon", "Tuna", "Trout"]
+const FishEnum = z.enum(fish)
 ```
 
 **Autocompletion**
@@ -994,9 +994,9 @@ const FishEnum = z.enum(fish);
 To get autocompletion with a Zod enum, use the `.enum` property of your schema:
 
 ```ts
-FishEnum.enum.Salmon; // => autocompletes
+FishEnum.enum.Salmon // => autocompletes
 
-FishEnum.enum;
+FishEnum.enum
 /*
 => {
   Salmon: "Salmon",
@@ -1009,7 +1009,7 @@ FishEnum.enum;
 You can also retrieve the list of options as a tuple with the `.options` property:
 
 ```ts
-FishEnum.options; // ["Salmon", "Tuna", "Trout"];
+FishEnum.options // ["Salmon", "Tuna", "Trout"];
 ```
 
 ## Native enums
@@ -1020,38 +1020,38 @@ Zod enums are the recommended approach to defining and validating enums. But if 
 
 ```ts
 enum Fruits {
-  Apple,
-  Banana,
+    Apple,
+    Banana,
 }
 
-const FruitEnum = z.nativeEnum(Fruits);
-type FruitEnum = z.infer<typeof FruitEnum>; // Fruits
+const FruitEnum = z.nativeEnum(Fruits)
+type FruitEnum = z.infer<typeof FruitEnum> // Fruits
 
-FruitEnum.parse(Fruits.Apple); // passes
-FruitEnum.parse(Fruits.Banana); // passes
-FruitEnum.parse(0); // passes
-FruitEnum.parse(1); // passes
-FruitEnum.parse(3); // fails
+FruitEnum.parse(Fruits.Apple) // passes
+FruitEnum.parse(Fruits.Banana) // passes
+FruitEnum.parse(0) // passes
+FruitEnum.parse(1) // passes
+FruitEnum.parse(3) // fails
 ```
 
 **String enums**
 
 ```ts
 enum Fruits {
-  Apple = "apple",
-  Banana = "banana",
-  Cantaloupe, // you can mix numerical and string enums
+    Apple = "apple",
+    Banana = "banana",
+    Cantaloupe, // you can mix numerical and string enums
 }
 
-const FruitEnum = z.nativeEnum(Fruits);
-type FruitEnum = z.infer<typeof FruitEnum>; // Fruits
+const FruitEnum = z.nativeEnum(Fruits)
+type FruitEnum = z.infer<typeof FruitEnum> // Fruits
 
-FruitEnum.parse(Fruits.Apple); // passes
-FruitEnum.parse(Fruits.Cantaloupe); // passes
-FruitEnum.parse("apple"); // passes
-FruitEnum.parse("banana"); // passes
-FruitEnum.parse(0); // passes
-FruitEnum.parse("Cantaloupe"); // fails
+FruitEnum.parse(Fruits.Apple) // passes
+FruitEnum.parse(Fruits.Cantaloupe) // passes
+FruitEnum.parse("apple") // passes
+FruitEnum.parse("banana") // passes
+FruitEnum.parse(0) // passes
+FruitEnum.parse("Cantaloupe") // fails
 ```
 
 **Const enums**
@@ -1060,24 +1060,24 @@ The `.nativeEnum()` function works for `as const` objects as well. ⚠️ `as co
 
 ```ts
 const Fruits = {
-  Apple: "apple",
-  Banana: "banana",
-  Cantaloupe: 3,
-} as const;
+    Apple: "apple",
+    Banana: "banana",
+    Cantaloupe: 3,
+} as const
 
-const FruitEnum = z.nativeEnum(Fruits);
-type FruitEnum = z.infer<typeof FruitEnum>; // "apple" | "banana" | 3
+const FruitEnum = z.nativeEnum(Fruits)
+type FruitEnum = z.infer<typeof FruitEnum> // "apple" | "banana" | 3
 
-FruitEnum.parse("apple"); // passes
-FruitEnum.parse("banana"); // passes
-FruitEnum.parse(3); // passes
-FruitEnum.parse("Cantaloupe"); // fails
+FruitEnum.parse("apple") // passes
+FruitEnum.parse("banana") // passes
+FruitEnum.parse(3) // passes
+FruitEnum.parse("Cantaloupe") // fails
 ```
 
 You can access the underlying object with the `.enum` property:
 
 ```ts
-FruitEnum.enum.Apple; // "apple"
+FruitEnum.enum.Apple // "apple"
 ```
 
 ## Optionals
@@ -1085,27 +1085,27 @@ FruitEnum.enum.Apple; // "apple"
 You can make any schema optional with `z.optional()`. This wraps the schema in a `ZodOptional` instance and returns the result.
 
 ```ts
-const schema = z.optional(z.string());
+const schema = z.optional(z.string())
 
-schema.parse(undefined); // => returns undefined
-type A = z.infer<typeof schema>; // string | undefined
+schema.parse(undefined) // => returns undefined
+type A = z.infer<typeof schema> // string | undefined
 ```
 
 For convenience, you can also call the `.optional()` method on an existing schema.
 
 ```ts
 const user = z.object({
-  username: z.string().optional(),
-});
-type C = z.infer<typeof user>; // { username?: string | undefined };
+    username: z.string().optional(),
+})
+type C = z.infer<typeof user> // { username?: string | undefined };
 ```
 
 You can extract the wrapped schema from a `ZodOptional` instance with `.unwrap()`.
 
 ```ts
-const stringSchema = z.string();
-const optionalString = stringSchema.optional();
-optionalString.unwrap() === stringSchema; // true
+const stringSchema = z.string()
+const optionalString = stringSchema.optional()
+optionalString.unwrap() === stringSchema // true
 ```
 
 ## Nullables
@@ -1113,24 +1113,24 @@ optionalString.unwrap() === stringSchema; // true
 Similarly, you can create nullable types with `z.nullable()`.
 
 ```ts
-const nullableString = z.nullable(z.string());
-nullableString.parse("asdf"); // => "asdf"
-nullableString.parse(null); // => null
+const nullableString = z.nullable(z.string())
+nullableString.parse("asdf") // => "asdf"
+nullableString.parse(null) // => null
 ```
 
 Or use the `.nullable()` method.
 
 ```ts
-const E = z.string().nullable(); // equivalent to nullableString
-type E = z.infer<typeof E>; // string | null
+const E = z.string().nullable() // equivalent to nullableString
+type E = z.infer<typeof E> // string | null
 ```
 
 Extract the inner schema with `.unwrap()`.
 
 ```ts
-const stringSchema = z.string();
-const nullableString = stringSchema.nullable();
-nullableString.unwrap() === stringSchema; // true
+const stringSchema = z.string()
+const nullableString = stringSchema.nullable()
+nullableString.unwrap() === stringSchema // true
 ```
 
 ## Objects
@@ -1138,18 +1138,18 @@ nullableString.unwrap() === stringSchema; // true
 ```ts
 // all properties are required by default
 const Dog = z.object({
-  name: z.string(),
-  age: z.number(),
-});
+    name: z.string(),
+    age: z.number(),
+})
 
 // extract the inferred type like this
-type Dog = z.infer<typeof Dog>;
+type Dog = z.infer<typeof Dog>
 
 // equivalent to:
 type Dog = {
-  name: string;
-  age: number;
-};
+    name: string
+    age: number
+}
 ```
 
 ### `.shape`
@@ -1157,8 +1157,8 @@ type Dog = {
 Use `.shape` to access the schemas for a particular key.
 
 ```ts
-Dog.shape.name; // => string schema
-Dog.shape.age; // => number schema
+Dog.shape.name // => string schema
+Dog.shape.age // => number schema
 ```
 
 ### `.keyof`
@@ -1166,8 +1166,8 @@ Dog.shape.age; // => number schema
 Use `.keyof` to create a `ZodEnum` schema from the keys of an object schema.
 
 ```ts
-const keySchema = Dog.keyof();
-keySchema; // ZodEnum<["name", "age"]>
+const keySchema = Dog.keyof()
+keySchema // ZodEnum<["name", "age"]>
 ```
 
 ### `.extend`
@@ -1176,8 +1176,8 @@ You can add additional fields to an object schema with the `.extend` method.
 
 ```ts
 const DogWithBreed = Dog.extend({
-  breed: z.string(),
-});
+    breed: z.string(),
+})
 ```
 
 You can use `.extend` to overwrite fields! Be careful with this power!
@@ -1187,11 +1187,11 @@ You can use `.extend` to overwrite fields! Be careful with this power!
 Equivalent to `A.extend(B.shape)`.
 
 ```ts
-const BaseTeacher = z.object({ students: z.array(z.string()) });
-const HasID = z.object({ id: z.string() });
+const BaseTeacher = z.object({ students: z.array(z.string()) })
+const HasID = z.object({ id: z.string() })
 
-const Teacher = BaseTeacher.merge(HasID);
-type Teacher = z.infer<typeof Teacher>; // => { students: string[], id: string }
+const Teacher = BaseTeacher.merge(HasID)
+type Teacher = z.infer<typeof Teacher> // => { students: string[], id: string }
 ```
 
 > If the two schemas share keys, the properties of B overrides the property of A. The returned schema also inherits the "unknownKeys" policy (strip/strict/passthrough) and the catchall schema of B.
@@ -1202,26 +1202,26 @@ Inspired by TypeScript's built-in `Pick` and `Omit` utility types, all Zod objec
 
 ```ts
 const Recipe = z.object({
-  id: z.string(),
-  name: z.string(),
-  ingredients: z.array(z.string()),
-});
+    id: z.string(),
+    name: z.string(),
+    ingredients: z.array(z.string()),
+})
 ```
 
 To only keep certain keys, use `.pick` .
 
 ```ts
-const JustTheName = Recipe.pick({ name: true });
-type JustTheName = z.infer<typeof JustTheName>;
+const JustTheName = Recipe.pick({ name: true })
+type JustTheName = z.infer<typeof JustTheName>
 // => { name: string }
 ```
 
 To remove certain keys, use `.omit` .
 
 ```ts
-const NoIDRecipe = Recipe.omit({ id: true });
+const NoIDRecipe = Recipe.omit({ id: true })
 
-type NoIDRecipe = z.infer<typeof NoIDRecipe>;
+type NoIDRecipe = z.infer<typeof NoIDRecipe>
 // => { name: string, ingredients: string[] }
 ```
 
@@ -1233,16 +1233,16 @@ Starting from this object:
 
 ```ts
 const user = z.object({
-  email: z.string(),
-  username: z.string(),
-});
+    email: z.string(),
+    username: z.string(),
+})
 // { email: string; username: string }
 ```
 
 We can create a partial version:
 
 ```ts
-const partialUser = user.partial();
+const partialUser = user.partial()
 // { email?: string | undefined; username?: string | undefined }
 ```
 
@@ -1250,8 +1250,8 @@ You can also specify which properties to make optional:
 
 ```ts
 const optionalEmail = user.partial({
-  email: true,
-});
+    email: true,
+})
 /*
 {
   email?: string | undefined;
@@ -1266,15 +1266,15 @@ The `.partial` method is shallow — it only applies one level deep. There is al
 
 ```ts
 const user = z.object({
-  username: z.string(),
-  location: z.object({
-    latitude: z.number(),
-    longitude: z.number(),
-  }),
-  strings: z.array(z.object({ value: z.string() })),
-});
+    username: z.string(),
+    location: z.object({
+        latitude: z.number(),
+        longitude: z.number(),
+    }),
+    strings: z.array(z.object({ value: z.string() })),
+})
 
-const deepPartialUser = user.deepPartial();
+const deepPartialUser = user.deepPartial()
 
 /*
 {
@@ -1298,18 +1298,18 @@ Starting from this object:
 
 ```ts
 const user = z
-  .object({
-    email: z.string(),
-    username: z.string(),
-  })
-  .partial();
+    .object({
+        email: z.string(),
+        username: z.string(),
+    })
+    .partial()
 // { email?: string | undefined; username?: string | undefined }
 ```
 
 We can create a required version:
 
 ```ts
-const requiredUser = user.required();
+const requiredUser = user.required()
 // { email: string; username: string }
 ```
 
@@ -1317,8 +1317,8 @@ You can also specify which properties to make required:
 
 ```ts
 const requiredEmail = user.required({
-  email: true,
-});
+    email: true,
+})
 /*
 {
   email: string;
@@ -1333,13 +1333,13 @@ By default Zod object schemas strip out unrecognized keys during parsing.
 
 ```ts
 const person = z.object({
-  name: z.string(),
-});
+    name: z.string(),
+})
 
 person.parse({
-  name: "bob dylan",
-  extraKey: 61,
-});
+    name: "bob dylan",
+    extraKey: 61,
+})
 // => { name: "bob dylan" }
 // extraKey has been stripped
 ```
@@ -1348,9 +1348,9 @@ Instead, if you want to pass through unknown keys, use `.passthrough()` .
 
 ```ts
 person.passthrough().parse({
-  name: "bob dylan",
-  extraKey: 61,
-});
+    name: "bob dylan",
+    extraKey: 61,
+})
 // => { name: "bob dylan", extraKey: 61 }
 ```
 
@@ -1360,15 +1360,15 @@ By default Zod object schemas strip out unrecognized keys during parsing. You ca
 
 ```ts
 const person = z
-  .object({
-    name: z.string(),
-  })
-  .strict();
+    .object({
+        name: z.string(),
+    })
+    .strict()
 
 person.parse({
-  name: "bob dylan",
-  extraKey: 61,
-});
+    name: "bob dylan",
+    extraKey: 61,
+})
 // => throws ZodError
 ```
 
@@ -1382,20 +1382,20 @@ You can pass a "catchall" schema into an object schema. All unknown keys will be
 
 ```ts
 const person = z
-  .object({
-    name: z.string(),
-  })
-  .catchall(z.number());
+    .object({
+        name: z.string(),
+    })
+    .catchall(z.number())
 
 person.parse({
-  name: "bob dylan",
-  validExtraKey: 61, // works fine
-});
+    name: "bob dylan",
+    validExtraKey: 61, // works fine
+})
 
 person.parse({
-  name: "bob dylan",
-  validExtraKey: false, // fails
-});
+    name: "bob dylan",
+    validExtraKey: false, // fails
+})
 // => throws ZodError
 ```
 
@@ -1404,17 +1404,17 @@ Using `.catchall()` obviates `.passthrough()` , `.strip()` , or `.strict()`. All
 ## Arrays
 
 ```ts
-const stringArray = z.array(z.string());
+const stringArray = z.array(z.string())
 
 // equivalent
-const stringArray = z.string().array();
+const stringArray = z.string().array()
 ```
 
 Be careful with the `.array()` method. It returns a new `ZodArray` instance. This means the _order_ in which you call methods matters. For instance:
 
 ```ts
-z.string().optional().array(); // (string | undefined)[]
-z.string().array().optional(); // string[] | undefined
+z.string().optional().array() // (string | undefined)[]
+z.string().array().optional() // string[] | undefined
 ```
 
 ### `.element`
@@ -1422,7 +1422,7 @@ z.string().array().optional(); // string[] | undefined
 Use `.element` to access the schema for an element of the array.
 
 ```ts
-stringArray.element; // => string schema
+stringArray.element // => string schema
 ```
 
 ### `.nonempty`
@@ -1430,12 +1430,12 @@ stringArray.element; // => string schema
 If you want to ensure that an array contains at least one element, use `.nonempty()`.
 
 ```ts
-const nonEmptyStrings = z.string().array().nonempty();
+const nonEmptyStrings = z.string().array().nonempty()
 // the inferred type is now
 // [string, ...string[]]
 
-nonEmptyStrings.parse([]); // throws: "Array cannot be empty"
-nonEmptyStrings.parse(["Ariana Grande"]); // passes
+nonEmptyStrings.parse([]) // throws: "Array cannot be empty"
+nonEmptyStrings.parse(["Ariana Grande"]) // passes
 ```
 
 You can optionally specify a custom error message:
@@ -1443,16 +1443,16 @@ You can optionally specify a custom error message:
 ```ts
 // optional custom error message
 const nonEmptyStrings = z.string().array().nonempty({
-  message: "Can't be empty!",
-});
+    message: "Can't be empty!",
+})
 ```
 
 ### `.min/.max/.length`
 
 ```ts
-z.string().array().min(5); // must contain 5 or more items
-z.string().array().max(5); // must contain 5 or fewer items
-z.string().array().length(5); // must contain 5 items exactly
+z.string().array().min(5) // must contain 5 or more items
+z.string().array().max(5) // must contain 5 or fewer items
+z.string().array().length(5) // must contain 5 items exactly
 ```
 
 Unlike `.nonempty()` these methods do not change the inferred type.
@@ -1463,22 +1463,22 @@ Unlike arrays, tuples have a fixed number of elements and each element can have 
 
 ```ts
 const athleteSchema = z.tuple([
-  z.string(), // name
-  z.number(), // jersey number
-  z.object({
-    pointsScored: z.number(),
-  }), // statistics
-]);
+    z.string(), // name
+    z.number(), // jersey number
+    z.object({
+        pointsScored: z.number(),
+    }), // statistics
+])
 
-type Athlete = z.infer<typeof athleteSchema>;
+type Athlete = z.infer<typeof athleteSchema>
 // type Athlete = [string, number, { pointsScored: number }]
 ```
 
 A variadic ("rest") argument can be added with the `.rest` method.
 
 ```ts
-const variadicTuple = z.tuple([z.string()]).rest(z.number());
-const result = variadicTuple.parse(["hello", 1, 2, 3]);
+const variadicTuple = z.tuple([z.string()]).rest(z.number())
+const result = variadicTuple.parse(["hello", 1, 2, 3])
 // => [string, ...number[]];
 ```
 
@@ -1487,10 +1487,10 @@ const result = variadicTuple.parse(["hello", 1, 2, 3]);
 Zod includes a built-in `z.union` method for composing "OR" types.
 
 ```ts
-const stringOrNumber = z.union([z.string(), z.number()]);
+const stringOrNumber = z.union([z.string(), z.number()])
 
-stringOrNumber.parse("foo"); // passes
-stringOrNumber.parse(14); // passes
+stringOrNumber.parse("foo") // passes
+stringOrNumber.parse(14) // passes
 ```
 
 Zod will test the input against each of the "options" in order and return the first value that validates successfully.
@@ -1498,7 +1498,7 @@ Zod will test the input against each of the "options" in order and return the fi
 For convenience, you can also use the [`.or` method](#or):
 
 ```ts
-const stringOrNumber = z.string().or(z.number());
+const stringOrNumber = z.string().or(z.number())
 ```
 
 **Optional string validation:**
@@ -1508,13 +1508,13 @@ To validate an optional form input, you can union the desired string validation 
 This example validates an input that is optional but needs to contain a [valid URL](#strings):
 
 ```ts
-const optionalUrl = z.union([z.string().url().nullish(), z.literal("")]);
+const optionalUrl = z.union([z.string().url().nullish(), z.literal("")])
 
-console.log(optionalUrl.safeParse(undefined).success); // true
-console.log(optionalUrl.safeParse(null).success); // true
-console.log(optionalUrl.safeParse("").success); // true
-console.log(optionalUrl.safeParse("https://zod.dev").success); // true
-console.log(optionalUrl.safeParse("not a valid url").success); // false
+console.log(optionalUrl.safeParse(undefined).success) // true
+console.log(optionalUrl.safeParse(null).success) // true
+console.log(optionalUrl.safeParse("").success) // true
+console.log(optionalUrl.safeParse("https://zod.dev").success) // true
+console.log(optionalUrl.safeParse("not a valid url").success) // false
 ```
 
 ## Discriminated unions
@@ -1523,8 +1523,8 @@ A discriminated union is a union of object schemas that all share a particular k
 
 ```ts
 type MyUnion =
-  | { status: "success"; data: string }
-  | { status: "failed"; error: Error };
+    | { status: "success"; data: string }
+    | { status: "failed"; error: Error }
 ```
 
 Such unions can be represented with the `z.discriminatedUnion` method. This enables faster evaluation, because Zod can check the _discriminator key_ (`status` in the example above) to determine which schema should be used to parse the input. This makes parsing more efficient and lets Zod report friendlier errors.
@@ -1533,11 +1533,11 @@ With the basic union method, the input is tested against each of the provided "o
 
 ```ts
 const myUnion = z.discriminatedUnion("status", [
-  z.object({ status: z.literal("success"), data: z.string() }),
-  z.object({ status: z.literal("failed"), error: z.instanceof(Error) }),
-]);
+    z.object({ status: z.literal("success"), data: z.string() }),
+    z.object({ status: z.literal("failed"), error: z.instanceof(Error) }),
+])
 
-myUnion.parse({ status: "success", data: "yippie ki yay" });
+myUnion.parse({ status: "success", data: "yippie ki yay" })
 ```
 
 ## Records
@@ -1547,30 +1547,30 @@ Record schemas are used to validate types such as `{ [k: string]: number }`.
 If you want to validate the _values_ of an object against some schema but don't care about the keys, use `z.record(valueType)`:
 
 ```ts
-const NumberCache = z.record(z.number());
+const NumberCache = z.record(z.number())
 
-type NumberCache = z.infer<typeof NumberCache>;
+type NumberCache = z.infer<typeof NumberCache>
 // => { [k: string]: number }
 ```
 
 This is particularly useful for storing or caching items by ID.
 
 ```ts
-const userSchema = z.object({ name: z.string() });
-const userStoreSchema = z.record(userSchema);
+const userSchema = z.object({ name: z.string() })
+const userStoreSchema = z.record(userSchema)
 
-type UserStore = z.infer<typeof userStoreSchema>;
+type UserStore = z.infer<typeof userStoreSchema>
 // => type UserStore = { [ x: string ]: { name: string } }
 
-const userStore: UserStore = {};
+const userStore: UserStore = {}
 
 userStore["77d2586b-9e8e-4ecf-8b21-ea7e0530eadd"] = {
-  name: "Carlotta",
-}; // passes
+    name: "Carlotta",
+} // passes
 
 userStore["77d2586b-9e8e-4ecf-8b21-ea7e0530eadd"] = {
-  whatever: "Ice cream sundae",
-}; // TypeError
+    whatever: "Ice cream sundae",
+} // TypeError
 ```
 
 ### Record key type
@@ -1579,9 +1579,9 @@ If you want to validate both the keys and the values, use
 `z.record(keyType, valueType)`:
 
 ```ts
-const NoEmptyKeysSchema = z.record(z.string().min(1), z.number());
-NoEmptyKeysSchema.parse({ count: 1 }); // => { 'count': 1 }
-NoEmptyKeysSchema.parse({ "": 1 }); // fails
+const NoEmptyKeysSchema = z.record(z.string().min(1), z.number())
+NoEmptyKeysSchema.parse({ count: 1 }) // => { 'count': 1 }
+NoEmptyKeysSchema.parse({ "": 1 }) // fails
 ```
 
 _(Notice how when passing two arguments, `valueType` is the second argument)_
@@ -1594,11 +1594,11 @@ As it turns out, TypeScript's behavior surrounding `[k: number]` is a little uni
 
 ```ts
 const testMap: { [k: number]: string } = {
-  1: "one",
-};
+    1: "one",
+}
 
 for (const key in testMap) {
-  console.log(`${key}: ${typeof key}`);
+    console.log(`${key}: ${typeof key}`)
 }
 // prints: `1: string`
 ```
@@ -1608,27 +1608,27 @@ As you can see, JavaScript automatically casts all object keys to strings under 
 ## Maps
 
 ```ts
-const stringNumberMap = z.map(z.string(), z.number());
+const stringNumberMap = z.map(z.string(), z.number())
 
-type StringNumberMap = z.infer<typeof stringNumberMap>;
+type StringNumberMap = z.infer<typeof stringNumberMap>
 // type StringNumberMap = Map<string, number>
 ```
 
 ## Sets
 
 ```ts
-const numberSet = z.set(z.number());
-type NumberSet = z.infer<typeof numberSet>;
+const numberSet = z.set(z.number())
+type NumberSet = z.infer<typeof numberSet>
 // type NumberSet = Set<number>
 ```
 
 Set schemas can be further constrained with the following utility methods.
 
 ```ts
-z.set(z.string()).nonempty(); // must contain at least one item
-z.set(z.string()).min(5); // must contain 5 or more items
-z.set(z.string()).max(5); // must contain 5 or fewer items
-z.set(z.string()).size(5); // must contain 5 items exactly
+z.set(z.string()).nonempty() // must contain at least one item
+z.set(z.string()).min(5) // must contain 5 or more items
+z.set(z.string()).max(5) // must contain 5 or fewer items
+z.set(z.string()).size(5) // must contain 5 items exactly
 ```
 
 ## Intersections
@@ -1637,27 +1637,27 @@ Intersections are useful for creating "logical AND" types. This is useful for in
 
 ```ts
 const Person = z.object({
-  name: z.string(),
-});
+    name: z.string(),
+})
 
 const Employee = z.object({
-  role: z.string(),
-});
+    role: z.string(),
+})
 
-const EmployedPerson = z.intersection(Person, Employee);
+const EmployedPerson = z.intersection(Person, Employee)
 
 // equivalent to:
-const EmployedPerson = Person.and(Employee);
+const EmployedPerson = Person.and(Employee)
 ```
 
 Though in many cases, it is recommended to use `A.merge(B)` to merge two objects. The `.merge` method returns a new `ZodObject` instance, whereas `A.and(B)` returns a less useful `ZodIntersection` instance that lacks common object methods like `pick` and `omit`.
 
 ```ts
-const a = z.union([z.number(), z.string()]);
-const b = z.union([z.number(), z.boolean()]);
-const c = z.intersection(a, b);
+const a = z.union([z.number(), z.string()])
+const b = z.union([z.number(), z.boolean()])
+const c = z.intersection(a, b)
 
-type c = z.infer<typeof c>; // => number
+type c = z.infer<typeof c> // => number
 ```
 
 <!-- Intersections in Zod are not smart. Whatever data you pass into `.parse()` gets passed into the two intersected schemas. Because Zod object schemas don't allow any unknown keys by default, there are some unintuitive behavior surrounding intersections of object schemas. -->
@@ -1685,31 +1685,31 @@ You can define a recursive schema in Zod, but because of a limitation of TypeScr
 
 ```ts
 const baseCategorySchema = z.object({
-  name: z.string(),
-});
+    name: z.string(),
+})
 
 type Category = z.infer<typeof baseCategorySchema> & {
-  subcategories: Category[];
-};
+    subcategories: Category[]
+}
 
 const categorySchema: z.ZodType<Category> = baseCategorySchema.extend({
-  subcategories: z.lazy(() => categorySchema.array()),
-});
+    subcategories: z.lazy(() => categorySchema.array()),
+})
 
 categorySchema.parse({
-  name: "People",
-  subcategories: [
-    {
-      name: "Politicians",
-      subcategories: [
+    name: "People",
+    subcategories: [
         {
-          name: "Presidents",
-          subcategories: [],
+            name: "Politicians",
+            subcategories: [
+                {
+                    name: "Presidents",
+                    subcategories: [],
+                },
+            ],
         },
-      ],
-    },
-  ],
-}); // passes
+    ],
+}) // passes
 ```
 
 Thanks to [crasite](https://github.com/crasite) for this example.
@@ -1725,23 +1725,23 @@ etc...
 
 ```ts
 const isValidId = (id: string): id is `${string}/${string}` =>
-  id.split("/").length === 2;
+    id.split("/").length === 2
 
 const baseSchema = z.object({
-  id: z.string().refine(isValidId),
-});
+    id: z.string().refine(isValidId),
+})
 
 type Input = z.input<typeof baseSchema> & {
-  children: Input[];
-};
+    children: Input[]
+}
 
 type Output = z.output<typeof baseSchema> & {
-  children: Output[];
-};
+    children: Output[]
+}
 
 const schema: z.ZodType<Output, z.ZodTypeDef, Input> = baseSchema.extend({
-  children: z.lazy(() => schema.array()),
-});
+    children: z.lazy(() => schema.array()),
+})
 ```
 
 Thanks to [marcus13371337](https://github.com/marcus13371337) and [JoelBeeldi](https://github.com/JoelBeeldi) for this example.
@@ -1751,14 +1751,14 @@ Thanks to [marcus13371337](https://github.com/marcus13371337) and [JoelBeeldi](h
 If you want to validate any JSON value, you can use the snippet below.
 
 ```ts
-const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
-type Literal = z.infer<typeof literalSchema>;
-type Json = Literal | { [key: string]: Json } | Json[];
+const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()])
+type Literal = z.infer<typeof literalSchema>
+type Json = Literal | { [key: string]: Json } | Json[]
 const jsonSchema: z.ZodType<Json> = z.lazy(() =>
-  z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)])
-);
+    z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)]),
+)
 
-jsonSchema.parse(data);
+jsonSchema.parse(data)
 ```
 
 Thanks to [ggoodman](https://github.com/ggoodman) for suggesting this.
@@ -1770,7 +1770,7 @@ Despite supporting recursive schemas, passing cyclical data into Zod will cause 
 ## Promises
 
 ```ts
-const numberPromise = z.promise(z.number());
+const numberPromise = z.promise(z.number())
 ```
 
 "Parsing" works a little differently with promise schemas. Validation happens in two parts:
@@ -1779,19 +1779,19 @@ const numberPromise = z.promise(z.number());
 2. Zod uses `.then` to attach an additional validation step onto the existing Promise. You'll have to use `.catch` on the returned Promise to handle validation failures.
 
 ```ts
-numberPromise.parse("tuna");
+numberPromise.parse("tuna")
 // ZodError: Non-Promise type: string
 
-numberPromise.parse(Promise.resolve("tuna"));
+numberPromise.parse(Promise.resolve("tuna"))
 // => Promise<number>
 
 const test = async () => {
-  await numberPromise.parse(Promise.resolve("tuna"));
-  // ZodError: Non-number type: string
+    await numberPromise.parse(Promise.resolve("tuna"))
+    // ZodError: Non-number type: string
 
-  await numberPromise.parse(Promise.resolve(3.14));
-  // => 3.14
-};
+    await numberPromise.parse(Promise.resolve(3.14))
+    // => 3.14
+}
 ```
 
 <!-- #### Non-native promise implementations
@@ -1804,14 +1804,14 @@ You can use `z.instanceof` to check that the input is an instance of a class. Th
 
 ```ts
 class Test {
-  name: string;
+    name: string
 }
 
-const TestSchema = z.instanceof(Test);
+const TestSchema = z.instanceof(Test)
 
-const blob: any = "whatever";
-TestSchema.parse(new Test()); // passes
-TestSchema.parse("blob"); // throws
+const blob: any = "whatever"
+TestSchema.parse(new Test()) // passes
+TestSchema.parse("blob") // throws
 ```
 
 ## Functions
@@ -1821,9 +1821,9 @@ Zod also lets you define "function schemas". This makes it easy to validate the 
 You can create a function schema with `z.function(args, returnType)` .
 
 ```ts
-const myFunction = z.function();
+const myFunction = z.function()
 
-type myFunction = z.infer<typeof myFunction>;
+type myFunction = z.infer<typeof myFunction>
 // => ()=>unknown
 ```
 
@@ -1831,11 +1831,11 @@ Define inputs and outputs.
 
 ```ts
 const myFunction = z
-  .function()
-  .args(z.string(), z.number()) // accepts an arbitrary number of arguments
-  .returns(z.boolean());
+    .function()
+    .args(z.string(), z.number()) // accepts an arbitrary number of arguments
+    .returns(z.boolean())
 
-type myFunction = z.infer<typeof myFunction>;
+type myFunction = z.infer<typeof myFunction>
 // => (arg0: string, arg1: number)=>boolean
 ```
 
@@ -1855,16 +1855,16 @@ Function schemas have an `.implement()` method which accepts a function and retu
 
 ```ts
 const trimmedLength = z
-  .function()
-  .args(z.string()) // accepts an arbitrary number of arguments
-  .returns(z.number())
-  .implement((x) => {
-    // TypeScript knows x is a string!
-    return x.trim().length;
-  });
+    .function()
+    .args(z.string()) // accepts an arbitrary number of arguments
+    .returns(z.number())
+    .implement(x => {
+        // TypeScript knows x is a string!
+        return x.trim().length
+    })
 
-trimmedLength("sandwich"); // => 8
-trimmedLength(" asdf "); // => 4
+trimmedLength("sandwich") // => 8
+trimmedLength(" asdf ") // => 4
 ```
 
 If you only care about validating inputs, just don't call the `.returns()` method. The output type will be inferred from the implementation.
@@ -1873,22 +1873,22 @@ If you only care about validating inputs, just don't call the `.returns()` metho
 
 ```ts
 const myFunction = z
-  .function()
-  .args(z.string())
-  .implement((arg) => {
-    return [arg.length];
-  });
+    .function()
+    .args(z.string())
+    .implement(arg => {
+        return [arg.length]
+    })
 
-myFunction; // (arg: string)=>number[]
+myFunction // (arg: string)=>number[]
 ```
 
 Extract the input and output schemas from a function schema.
 
 ```ts
-myFunction.parameters();
+myFunction.parameters()
 // => ZodTuple<[ZodString, ZodNumber]>
 
-myFunction.returnType();
+myFunction.returnType()
 // => ZodBoolean
 ```
 
@@ -1906,7 +1906,7 @@ Typically Zod operates under a "parse then transform" paradigm. Zod validates th
 But sometimes you want to apply some transform to the input _before_ parsing happens. A common use case: type coercion. Zod enables this with the `z.preprocess()`.
 
 ```ts
-const castToString = z.preprocess((val) => String(val), z.string());
+const castToString = z.preprocess(val => String(val), z.string())
 ```
 
 This returns a `ZodEffects` instance. `ZodEffects` is a wrapper class that contains all logic pertaining to preprocessing, refinements, and transforms.
@@ -1916,20 +1916,20 @@ This returns a `ZodEffects` instance. `ZodEffects` is a wrapper class that conta
 You can create a Zod schema for any TypeScript type by using `z.custom()`. This is useful for creating schemas for types that are not supported by Zod out of the box, such as template string literals.
 
 ```ts
-const px = z.custom<`${number}px`>((val) => {
-  return typeof val === "string" ? /^\d+px$/.test(val) : false;
-});
+const px = z.custom<`${number}px`>(val => {
+    return typeof val === "string" ? /^\d+px$/.test(val) : false
+})
 
-type px = z.infer<typeof px>; // `${number}px`
+type px = z.infer<typeof px> // `${number}px`
 
-px.parse("42px"); // "42px"
-px.parse("42vw"); // throws;
+px.parse("42px") // "42px"
+px.parse("42vw") // throws;
 ```
 
 If you don't provide a validation function, Zod will allow any value. This can be dangerous!
 
 ```ts
-z.custom<{ arg: string }>(); // performs no validation
+z.custom<{ arg: string }>() // performs no validation
 ```
 
 You can customize the error message and other options by passing a second argument. This parameter works the same way as the params parameter of [`.refine`](#refine).
@@ -1951,10 +1951,10 @@ Given any Zod schema, you can call its `.parse` method to check `data` is valid.
 > IMPORTANT: The value returned by `.parse` is a _deep clone_ of the variable you passed in.
 
 ```ts
-const stringSchema = z.string();
+const stringSchema = z.string()
 
-stringSchema.parse("fish"); // => returns "fish"
-stringSchema.parse(12); // throws error
+stringSchema.parse("fish") // => returns "fish"
+stringSchema.parse(12) // throws error
 ```
 
 ### `.parseAsync`
@@ -1964,10 +1964,10 @@ stringSchema.parse(12); // throws error
 If you use asynchronous [refinements](#refine) or [transforms](#transform) (more on those later), you'll need to use `.parseAsync`.
 
 ```ts
-const stringSchema = z.string().refine(async (val) => val.length <= 8);
+const stringSchema = z.string().refine(async val => val.length <= 8)
 
-await stringSchema.parseAsync("hello"); // => returns "hello"
-await stringSchema.parseAsync("hello world"); // => throws error
+await stringSchema.parseAsync("hello") // => returns "hello"
+await stringSchema.parseAsync("hello world") // => throws error
 ```
 
 ### `.safeParse`
@@ -1977,23 +1977,23 @@ await stringSchema.parseAsync("hello world"); // => throws error
 If you don't want Zod to throw errors when validation fails, use `.safeParse`. This method returns an object containing either the successfully parsed data or a ZodError instance containing detailed information about the validation problems.
 
 ```ts
-stringSchema.safeParse(12);
+stringSchema.safeParse(12)
 // => { success: false; error: ZodError }
 
-stringSchema.safeParse("billie");
+stringSchema.safeParse("billie")
 // => { success: true; data: 'billie' }
 ```
 
 The result is a _discriminated union_, so you can handle errors very conveniently:
 
 ```ts
-const result = stringSchema.safeParse("billie");
+const result = stringSchema.safeParse("billie")
 if (!result.success) {
-  // handle error then return
-  result.error;
+    // handle error then return
+    result.error
 } else {
-  // do something
-  result.data;
+    // do something
+    result.data
 }
 ```
 
@@ -2004,13 +2004,13 @@ if (!result.success) {
 An asynchronous version of `safeParse`.
 
 ```ts
-await stringSchema.safeParseAsync("billie");
+await stringSchema.safeParseAsync("billie")
 ```
 
 For convenience, this has been aliased to `.spa`:
 
 ```ts
-await stringSchema.spa("billie");
+await stringSchema.spa("billie")
 ```
 
 ### `.refine`
@@ -2024,9 +2024,9 @@ Zod was designed to mirror TypeScript as closely as possible. But there are many
 For example, you can define a custom validation check on _any_ Zod schema with `.refine` :
 
 ```ts
-const myString = z.string().refine((val) => val.length <= 255, {
-  message: "String can't be more than 255 characters",
-});
+const myString = z.string().refine(val => val.length <= 255, {
+    message: "String can't be more than 255 characters",
+})
 ```
 
 > ⚠️ Refinement functions should not throw. Instead they should return a falsy value to signal failure.
@@ -2040,41 +2040,41 @@ As you can see, `.refine` takes two arguments.
 
 ```ts
 type RefineParams = {
-  // override error message
-  message?: string;
+    // override error message
+    message?: string
 
-  // appended to error path
-  path?: (string | number)[];
+    // appended to error path
+    path?: (string | number)[]
 
-  // params object you can use to customize message
-  // in error map
-  params?: object;
-};
+    // params object you can use to customize message
+    // in error map
+    params?: object
+}
 ```
 
 For advanced cases, the second argument can also be a function that returns `RefineParams`.
 
 ```ts
 const longString = z.string().refine(
-  (val) => val.length > 10,
-  (val) => ({ message: `${val} is not more than 10 characters` })
-);
+    val => val.length > 10,
+    val => ({ message: `${val} is not more than 10 characters` }),
+)
 ```
 
 #### Customize error path
 
 ```ts
 const passwordForm = z
-  .object({
-    password: z.string(),
-    confirm: z.string(),
-  })
-  .refine((data) => data.password === data.confirm, {
-    message: "Passwords don't match",
-    path: ["confirm"], // path of error
-  });
+    .object({
+        password: z.string(),
+        confirm: z.string(),
+    })
+    .refine(data => data.password === data.confirm, {
+        message: "Passwords don't match",
+        path: ["confirm"], // path of error
+    })
 
-passwordForm.parse({ password: "asdf", confirm: "qwer" });
+passwordForm.parse({ password: "asdf", confirm: "qwer" })
 ```
 
 Because you provided a `path` parameter, the resulting error will be:
@@ -2094,10 +2094,10 @@ ZodError {
 Refinements can also be async:
 
 ```ts
-const userId = z.string().refine(async (id) => {
-  // verify that ID exists in database
-  return true;
-});
+const userId = z.string().refine(async id => {
+    // verify that ID exists in database
+    return true
+})
 ```
 
 > ⚠️ If you use async refinements, you must use the `.parseAsync` method to parse data! Otherwise Zod will throw an error.
@@ -2108,8 +2108,8 @@ Transforms and refinements can be interleaved:
 
 ```ts
 z.string()
-  .transform((val) => val.length)
-  .refine((val) => val > 25);
+    .transform(val => val.length)
+    .refine(val => val > 25)
 ```
 
 <!-- Note that the `path` is set to `["confirm"]` , so you can easily display this error underneath the "Confirm password" textbox.
@@ -2142,23 +2142,23 @@ The `.refine` method is actually syntactic sugar atop a more versatile (and verb
 
 ```ts
 const Strings = z.array(z.string()).superRefine((val, ctx) => {
-  if (val.length > 3) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.too_big,
-      maximum: 3,
-      type: "array",
-      inclusive: true,
-      message: "Too many items 😡",
-    });
-  }
+    if (val.length > 3) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.too_big,
+            maximum: 3,
+            type: "array",
+            inclusive: true,
+            message: "Too many items 😡",
+        })
+    }
 
-  if (val.length !== new Set(val).size) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message: `No duplicates allowed.`,
-    });
-  }
-});
+    if (val.length !== new Set(val).size) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: `No duplicates allowed.`,
+        })
+    }
+})
 ```
 
 You can add as many issues as you like. If `ctx.addIssue` is _not_ called during the execution of the function, validation passes.
@@ -2171,23 +2171,23 @@ By default, parsing will continue even after a refinement check fails. For insta
 
 ```ts
 const schema = z.number().superRefine((val, ctx) => {
-  if (val < 10) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message: "should be >= 10",
-      fatal: true,
-    });
+    if (val < 10) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "should be >= 10",
+            fatal: true,
+        })
 
-    return z.NEVER;
-  }
+        return z.NEVER
+    }
 
-  if (val !== 12) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message: "should be twelve",
-    });
-  }
-});
+    if (val !== 12) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "should be twelve",
+        })
+    }
+})
 ```
 
 #### Type refinements
@@ -2196,23 +2196,23 @@ If you provide a [type predicate](https://www.typescriptlang.org/docs/handbook/2
 
 ```ts
 const schema = z
-  .object({
-    first: z.string(),
-    second: z.number(),
-  })
-  .nullable()
-  .superRefine((arg, ctx): arg is { first: string; second: number } => {
-    if (!arg) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom, // customize your issue
-        message: "object should exist",
-      });
-    }
+    .object({
+        first: z.string(),
+        second: z.number(),
+    })
+    .nullable()
+    .superRefine((arg, ctx): arg is { first: string; second: number } => {
+        if (!arg) {
+            ctx.addIssue({
+                code: z.ZodIssueCode.custom, // customize your issue
+                message: "object should exist",
+            })
+        }
 
-    return z.NEVER; // The return value is not used, but we need to return something to satisfy the typing
-  })
-  // here, TS knows that arg is not null
-  .refine((arg) => arg.first === "bob", "`first` is not `bob`!");
+        return z.NEVER // The return value is not used, but we need to return something to satisfy the typing
+    })
+    // here, TS knows that arg is not null
+    .refine(arg => arg.first === "bob", "`first` is not `bob`!")
 ```
 
 > ⚠️ You **must** use `ctx.addIssue()` instead of returning a boolean value to indicate whether the validation passes. If `ctx.addIssue` is _not_ called during the execution of the function, validation passes.
@@ -2222,9 +2222,9 @@ const schema = z
 To transform data after parsing, use the `transform` method.
 
 ```ts
-const stringToNumber = z.string().transform((val) => val.length);
+const stringToNumber = z.string().transform(val => val.length)
 
-stringToNumber.parse("string"); // => 6
+stringToNumber.parse("string") // => 6
 ```
 
 #### Chaining order
@@ -2233,11 +2233,11 @@ Note that `stringToNumber` above is an instance of the `ZodEffects` subclass. It
 
 ```ts
 const emailToDomain = z
-  .string()
-  .email()
-  .transform((val) => val.split("@")[1]);
+    .string()
+    .email()
+    .transform(val => val.split("@")[1])
 
-emailToDomain.parse("colinhacks@example.com"); // => example.com
+emailToDomain.parse("colinhacks@example.com") // => example.com
 ```
 
 #### Validating during transform
@@ -2248,21 +2248,21 @@ As with `.superRefine`, the transform function receives a `ctx` object with an `
 
 ```ts
 const numberInString = z.string().transform((val, ctx) => {
-  const parsed = parseInt(val);
-  if (isNaN(parsed)) {
-    ctx.addIssue({
-      code: z.ZodIssueCode.custom,
-      message: "Not a number",
-    });
+    const parsed = parseInt(val)
+    if (isNaN(parsed)) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: "Not a number",
+        })
 
-    // This is a special symbol you can use to
-    // return early from the transform function.
-    // It has type `never` so it does not affect the
-    // inferred return type.
-    return z.NEVER;
-  }
-  return parsed;
-});
+        // This is a special symbol you can use to
+        // return early from the transform function.
+        // It has type `never` so it does not affect the
+        // inferred return type.
+        return z.NEVER
+    }
+    return parsed
+})
 ```
 
 #### Relationship to refinements
@@ -2271,11 +2271,11 @@ Transforms and refinements can be interleaved. These will be executed in the ord
 
 ```ts
 const nameToGreeting = z
-  .string()
-  .transform((val) => val.toUpperCase())
-  .refine((val) => val.length > 15)
-  .transform((val) => `Hello ${val}`)
-  .refine((val) => val.indexOf("!") === -1);
+    .string()
+    .transform(val => val.toUpperCase())
+    .refine(val => val.length > 15)
+    .transform(val => `Hello ${val}`)
+    .refine(val => val.indexOf("!") === -1)
 ```
 
 #### Async transforms
@@ -2284,11 +2284,11 @@ Transforms can also be async.
 
 ```ts
 const IdToUser = z
-  .string()
-  .uuid()
-  .transform(async (id) => {
-    return await getUserById(id);
-  });
+    .string()
+    .uuid()
+    .transform(async id => {
+        return await getUserById(id)
+    })
 ```
 
 > ⚠️ If your schema contains asynchronous transforms, you must use .parseAsync() or .safeParseAsync() to parse data. Otherwise Zod will throw an error.
@@ -2298,19 +2298,19 @@ const IdToUser = z
 You can use transforms to implement the concept of "default values" in Zod.
 
 ```ts
-const stringWithDefault = z.string().default("tuna");
+const stringWithDefault = z.string().default("tuna")
 
-stringWithDefault.parse(undefined); // => "tuna"
+stringWithDefault.parse(undefined) // => "tuna"
 ```
 
 Optionally, you can pass a function into `.default` that will be re-executed whenever a default value needs to be generated:
 
 ```ts
-const numberWithRandomDefault = z.number().default(Math.random);
+const numberWithRandomDefault = z.number().default(Math.random)
 
-numberWithRandomDefault.parse(undefined); // => 0.4413456736055323
-numberWithRandomDefault.parse(undefined); // => 0.1871840107401901
-numberWithRandomDefault.parse(undefined); // => 0.7223408162401552
+numberWithRandomDefault.parse(undefined) // => 0.4413456736055323
+numberWithRandomDefault.parse(undefined) // => 0.1871840107401901
+numberWithRandomDefault.parse(undefined) // => 0.7223408162401552
 ```
 
 Conceptually, this is how Zod processes default values:
@@ -2324,9 +2324,9 @@ Use `.describe()` to add a `description` property to the resulting schema.
 
 ```ts
 const documentedString = z
-  .string()
-  .describe("A useful bit of text, if you know what to do with it.");
-documentedString.description; // A useful bit of text…
+    .string()
+    .describe("A useful bit of text, if you know what to do with it.")
+documentedString.description // A useful bit of text…
 ```
 
 This can be useful for documenting a field, for example in a JSON Schema using a library like [`zod-to-json-schema`](https://github.com/StefanTerdell/zod-to-json-schema)).
@@ -2336,23 +2336,23 @@ This can be useful for documenting a field, for example in a JSON Schema using a
 Use `.catch()` to provide a "catch value" to be returned in the event of a parsing error.
 
 ```ts
-const numberWithCatch = z.number().catch(42);
+const numberWithCatch = z.number().catch(42)
 
-numberWithCatch.parse(5); // => 5
-numberWithCatch.parse("tuna"); // => 42
+numberWithCatch.parse(5) // => 5
+numberWithCatch.parse("tuna") // => 42
 ```
 
 Optionally, you can pass a function into `.catch` that will be re-executed whenever a default value needs to be generated. A `ctx` object containing the caught error will be passed into this function.
 
 ```ts
-const numberWithRandomCatch = z.number().catch((ctx) => {
-  ctx.error; // the caught ZodError
-  return Math.random();
-});
+const numberWithRandomCatch = z.number().catch(ctx => {
+    ctx.error // the caught ZodError
+    return Math.random()
+})
 
-numberWithRandomCatch.parse("sup"); // => 0.4413456736055323
-numberWithRandomCatch.parse("sup"); // => 0.1871840107401901
-numberWithRandomCatch.parse("sup"); // => 0.7223408162401552
+numberWithRandomCatch.parse("sup") // => 0.4413456736055323
+numberWithRandomCatch.parse("sup") // => 0.1871840107401901
+numberWithRandomCatch.parse("sup") // => 0.7223408162401552
 ```
 
 Conceptually, this is how Zod processes "catch values":
@@ -2365,10 +2365,10 @@ Conceptually, this is how Zod processes "catch values":
 A convenience method that returns an optional version of a schema.
 
 ```ts
-const optionalString = z.string().optional(); // string | undefined
+const optionalString = z.string().optional() // string | undefined
 
 // equivalent to
-z.optional(z.string());
+z.optional(z.string())
 ```
 
 ### `.nullable`
@@ -2376,10 +2376,10 @@ z.optional(z.string());
 A convenience method that returns a nullable version of a schema.
 
 ```ts
-const nullableString = z.string().nullable(); // string | null
+const nullableString = z.string().nullable() // string | null
 
 // equivalent to
-z.nullable(z.string());
+z.nullable(z.string())
 ```
 
 ### `.nullish`
@@ -2387,10 +2387,10 @@ z.nullable(z.string());
 A convenience method that returns a "nullish" version of a schema. Nullish schemas will accept both `undefined` and `null`. Read more about the concept of "nullish" [in the TypeScript 3.7 release notes](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html#nullish-coalescing).
 
 ```ts
-const nullishString = z.string().nullish(); // string | null | undefined
+const nullishString = z.string().nullish() // string | null | undefined
 
 // equivalent to
-z.string().nullable().optional();
+z.string().nullable().optional()
 ```
 
 ### `.array`
@@ -2398,10 +2398,10 @@ z.string().nullable().optional();
 A convenience method that returns an array schema for the given type:
 
 ```ts
-const stringArray = z.string().array(); // string[]
+const stringArray = z.string().array() // string[]
 
 // equivalent to
-z.array(z.string());
+z.array(z.string())
 ```
 
 ### `.promise`
@@ -2409,10 +2409,10 @@ z.array(z.string());
 A convenience method for promise types:
 
 ```ts
-const stringPromise = z.string().promise(); // Promise<string>
+const stringPromise = z.string().promise() // Promise<string>
 
 // equivalent to
-z.promise(z.string());
+z.promise(z.string())
 ```
 
 ### `.or`
@@ -2420,10 +2420,10 @@ z.promise(z.string());
 A convenience method for [union types](#unions).
 
 ```ts
-const stringOrNumber = z.string().or(z.number()); // string | number
+const stringOrNumber = z.string().or(z.number()) // string | number
 
 // equivalent to
-z.union([z.string(), z.number()]);
+z.union([z.string(), z.number()])
 ```
 
 ### `.and`
@@ -2432,11 +2432,11 @@ A convenience method for creating intersection types.
 
 ```ts
 const nameAndAge = z
-  .object({ name: z.string() })
-  .and(z.object({ age: z.number() })); // { name: string } & { age: number }
+    .object({ name: z.string() })
+    .and(z.object({ age: z.number() })) // { name: string } & { age: number }
 
 // equivalent to
-z.intersection(z.object({ name: z.string() }), z.object({ age: z.number() }));
+z.intersection(z.object({ name: z.string() }), z.object({ age: z.number() }))
 ```
 
 ### `.brand`
@@ -2446,35 +2446,35 @@ z.intersection(z.object({ name: z.string() }), z.object({ age: z.number() }));
 TypeScript's type system is structural, which means that any two types that are structurally equivalent are considered the same.
 
 ```ts
-type Cat = { name: string };
-type Dog = { name: string };
+type Cat = { name: string }
+type Dog = { name: string }
 
-const petCat = (cat: Cat) => {};
-const fido: Dog = { name: "fido" };
-petCat(fido); // works fine
+const petCat = (cat: Cat) => {}
+const fido: Dog = { name: "fido" }
+petCat(fido) // works fine
 ```
 
 In some cases, its can be desirable to simulate _nominal typing_ inside TypeScript. For instance, you may wish to write a function that only accepts an input that has been validated by Zod. This can be achieved with _branded types_ (AKA _opaque types_).
 
 ```ts
-const Cat = z.object({ name: z.string() }).brand<"Cat">();
-type Cat = z.infer<typeof Cat>;
+const Cat = z.object({ name: z.string() }).brand<"Cat">()
+type Cat = z.infer<typeof Cat>
 
-const petCat = (cat: Cat) => {};
+const petCat = (cat: Cat) => {}
 
 // this works
-const simba = Cat.parse({ name: "simba" });
-petCat(simba);
+const simba = Cat.parse({ name: "simba" })
+petCat(simba)
 
 // this doesn't
-petCat({ name: "fido" });
+petCat({ name: "fido" })
 ```
 
 Under the hood, this works by attaching a "brand" to the inferred type using an intersection type. This way, plain/unbranded data structures are no longer assignable to the inferred type of the schema.
 
 ```ts
-const Cat = z.object({ name: z.string() }).brand<"Cat">();
-type Cat = z.infer<typeof Cat>;
+const Cat = z.object({ name: z.string() }).brand<"Cat">()
+type Cat = z.infer<typeof Cat>
 // {name: string} & {[symbol]: "Cat"}
 ```
 
@@ -2487,27 +2487,27 @@ Note that branded types do not affect the runtime result of `.parse`. It is a st
 This method returns a `ZodReadonly` schema instance that parses the input using the base schema, then calls `Object.freeze()` on the result. The inferred type is also marked as `readonly`.
 
 ```ts
-const schema = z.object({ name: string }).readonly();
-type schema = z.infer<typeof schema>;
+const schema = z.object({ name: string }).readonly()
+type schema = z.infer<typeof schema>
 // Readonly<{name: string}>
 
-const result = schema.parse({ name: "fido" });
-result.name = "simba"; // error
+const result = schema.parse({ name: "fido" })
+result.name = "simba" // error
 ```
 
 The inferred type uses TypeScript's built-in readonly types when relevant.
 
 ```ts
-z.array(z.string()).readonly();
+z.array(z.string()).readonly()
 // readonly string[]
 
-z.tuple([z.string(), z.number()]).readonly();
+z.tuple([z.string(), z.number()]).readonly()
 // readonly [string, number]
 
-z.map(z.string(), z.date()).readonly();
+z.map(z.string(), z.date()).readonly()
 // ReadonlyMap<string, Date>
 
-z.set(z.string()).readonly();
+z.set(z.string()).readonly()
 // ReadonlySet<Promise<string>>
 ```
 
@@ -2517,8 +2517,8 @@ Schemas can be chained into validation "pipelines". It's useful for easily valid
 
 ```ts
 z.string()
-  .transform((val) => val.length)
-  .pipe(z.number().min(5));
+    .transform(val => val.length)
+    .pipe(z.number().min(5))
 ```
 
 The `.pipe()` method returns a `ZodPipeline` instance.
@@ -2530,26 +2530,26 @@ You can constrain the input to types that work well with your chosen coercion. T
 without constrained input:
 
 ```ts
-const toDate = z.coerce.date();
+const toDate = z.coerce.date()
 
 // works intuitively
-console.log(toDate.safeParse("2023-01-01").success); // true
+console.log(toDate.safeParse("2023-01-01").success) // true
 
 // might not be what you want
-console.log(toDate.safeParse(null).success); // true
+console.log(toDate.safeParse(null).success) // true
 ```
 
 with constrained input:
 
 ```ts
-const datelike = z.union([z.number(), z.string(), z.date()]);
-const datelikeToDate = datelike.pipe(z.coerce.date());
+const datelike = z.union([z.number(), z.string(), z.date()])
+const datelikeToDate = datelike.pipe(z.coerce.date())
 
 // still works intuitively
-console.log(datelikeToDate.safeParse("2023-01-01").success); // true
+console.log(datelikeToDate.safeParse("2023-01-01").success) // true
 
 // more likely what you want
-console.log(datelikeToDate.safeParse(null).success); // false
+console.log(datelikeToDate.safeParse(null).success) // false
 ```
 
 You can also use this technique to avoid coercions that throw uncaught errors.
@@ -2557,26 +2557,26 @@ You can also use this technique to avoid coercions that throw uncaught errors.
 without constrained input:
 
 ```ts
-const toBigInt = z.coerce.bigint();
+const toBigInt = z.coerce.bigint()
 
 // works intuitively
-console.log(toBigInt.safeParse("42")); // true
+console.log(toBigInt.safeParse("42")) // true
 
 // probably not what you want
-console.log(toBigInt.safeParse(null)); // throws uncaught error
+console.log(toBigInt.safeParse(null)) // throws uncaught error
 ```
 
 with constrained input:
 
 ```ts
-const toNumber = z.number().or(z.string()).pipe(z.coerce.number());
-const toBigInt = z.bigint().or(toNumber).pipe(z.coerce.bigint());
+const toNumber = z.number().or(z.string()).pipe(z.coerce.number())
+const toBigInt = z.bigint().or(toNumber).pipe(z.coerce.bigint())
 
 // still works intuitively
-console.log(toBigInt.safeParse("42").success); // true
+console.log(toBigInt.safeParse("42").success) // true
 
 // error handled by zod, more likely what you want
-console.log(toBigInt.safeParse(null).success); // false
+console.log(toBigInt.safeParse(null).success) // false
 ```
 
 ## Guides and concepts
@@ -2586,11 +2586,11 @@ console.log(toBigInt.safeParse(null).success); // false
 You can extract the TypeScript type of any schema with `z.infer<typeof mySchema>` .
 
 ```ts
-const A = z.string();
-type A = z.infer<typeof A>; // string
+const A = z.string()
+type A = z.infer<typeof A> // string
 
-const u: A = 12; // TypeError
-const u: A = "asdf"; // compiles
+const u: A = 12 // TypeError
+const u: A = "asdf" // compiles
 ```
 
 **What about transforms?**
@@ -2600,14 +2600,14 @@ In reality each Zod schema internally tracks **two** types: an input and an outp
 You can separately extract the input and output types like so:
 
 ```ts
-const stringToNumber = z.string().transform((val) => val.length);
+const stringToNumber = z.string().transform(val => val.length)
 
 // ⚠️ Important: z.infer returns the OUTPUT type!
-type input = z.input<typeof stringToNumber>; // string
-type output = z.output<typeof stringToNumber>; // number
+type input = z.input<typeof stringToNumber> // string
+type output = z.output<typeof stringToNumber> // number
 
 // equivalent to z.output!
-type inferred = z.infer<typeof stringToNumber>; // number
+type inferred = z.infer<typeof stringToNumber> // number
 ```
 
 ### Writing generic functions
@@ -2616,22 +2616,22 @@ When attempting to write a function that accepts a Zod schema as an input, it's 
 
 ```ts
 function makeSchemaOptional<T>(schema: z.ZodType<T>) {
-  return schema.optional();
+    return schema.optional()
 }
 ```
 
 This approach has some issues. The `schema` variable in this function is typed as an instance of `ZodType`, which is an abstract class that all Zod schemas inherit from. This approach loses type information, namely _which subclass_ the input actually is.
 
 ```ts
-const arg = makeSchemaOptional(z.string());
-arg.unwrap();
+const arg = makeSchemaOptional(z.string())
+arg.unwrap()
 ```
 
 A better approach is for the generic parameter to refer to _the schema as a whole_.
 
 ```ts
 function makeSchemaOptional<T extends z.ZodTypeAny>(schema: T) {
-  return schema.optional();
+    return schema.optional()
 }
 ```
 
@@ -2640,8 +2640,8 @@ function makeSchemaOptional<T extends z.ZodTypeAny>(schema: T) {
 As you can see, `schema` is now fully and properly typed.
 
 ```ts
-const arg = makeSchemaOptional(z.string());
-arg.unwrap(); // ZodString
+const arg = makeSchemaOptional(z.string())
+arg.unwrap() // ZodString
 ```
 
 #### Constraining allowable inputs
@@ -2660,13 +2660,13 @@ By constraining these in your generic input, you can limit what schemas are allo
 
 ```ts
 function makeSchemaOptional<T extends z.ZodType<string>>(schema: T) {
-  return schema.optional();
+    return schema.optional()
 }
 
-makeSchemaOptional(z.string());
+makeSchemaOptional(z.string())
 // works fine
 
-makeSchemaOptional(z.number());
+makeSchemaOptional(z.number())
 // Error: 'ZodNumber' is not assignable to parameter of type 'ZodType<string, ZodTypeDef, string>'
 ```
 
@@ -2676,14 +2676,14 @@ Zod provides a subclass of Error called `ZodError`. ZodErrors contain an `issues
 
 ```ts
 const result = z
-  .object({
-    name: z.string(),
-  })
-  .safeParse({ name: 12 });
+    .object({
+        name: z.string(),
+    })
+    .safeParse({ name: 12 })
 
 if (!result.success) {
-  result.error.issues;
-  /* [
+    result.error.issues
+    /* [
       {
         "code": "invalid_type",
         "expected": "string",
@@ -2705,19 +2705,19 @@ You can use the `.format()` method to convert this error into a nested object.
 
 ```ts
 const result = z
-  .object({
-    name: z.string(),
-  })
-  .safeParse({ name: 12 });
+    .object({
+        name: z.string(),
+    })
+    .safeParse({ name: 12 })
 
 if (!result.success) {
-  const formatted = result.error.format();
-  /* {
+    const formatted = result.error.format()
+    /* {
     name: { _errors: [ 'Expected string, received number' ] }
   } */
 
-  formatted.name?._errors;
-  // => ["Expected string, received number"]
+    formatted.name?._errors
+    // => ["Expected string, received number"]
 }
 ```
 
@@ -2785,12 +2785,12 @@ Doesn't support static type inference 😕
 
 Yup is a full-featured library that was implemented first in vanilla JS, and later rewritten in TypeScript.
 
-- Supports casting and transforms
-- All object fields are optional by default
+-   Supports casting and transforms
+-   All object fields are optional by default
 <!-- - Missing nonempty arrays with proper typing (`[T, ...T[]]`) -->
-- Missing promise schemas
-- Missing function schemas
-- Missing union & intersection schemas
+-   Missing promise schemas
+-   Missing function schemas
+-   Missing union & intersection schemas
 
 <!-- ¹Yup has a strange interpretation of the word `required`. Instead of meaning "not undefined", Yup uses it to mean "not empty". So `yup.string().required()` will not accept an empty string, and `yup.array(yup.string()).required()` will not accept an empty array. Instead, Yup us Zod arrays there is a dedicated `.nonempty()` method to indicate this, or you can implement it with a custom refinement. -->
 
@@ -2803,19 +2803,19 @@ io-ts is an excellent library by gcanti. The API of io-ts heavily inspired the d
 In our experience, io-ts prioritizes functional programming purity over developer experience in many cases. This is a valid and admirable design goal, but it makes io-ts particularly hard to integrate into an existing codebase with a more procedural or object-oriented bias. For instance, consider how to define an object with optional properties in io-ts:
 
 ```ts
-import * as t from "io-ts";
+import * as t from "io-ts"
 
 const A = t.type({
-  foo: t.string,
-});
+    foo: t.string,
+})
 
 const B = t.partial({
-  bar: t.number,
-});
+    bar: t.number,
+})
 
-const C = t.intersection([A, B]);
+const C = t.intersection([A, B])
 
-type C = t.TypeOf<typeof C>;
+type C = t.TypeOf<typeof C>
 // returns { foo: string; bar?: number | undefined }
 ```
 
@@ -2825,11 +2825,11 @@ Consider the equivalent in Zod:
 
 ```ts
 const C = z.object({
-  foo: z.string(),
-  bar: z.number().optional(),
-});
+    foo: z.string(),
+    bar: z.number().optional(),
+})
 
-type C = z.infer<typeof C>;
+type C = z.infer<typeof C>
 // returns { foo: string; bar?: number | undefined }
 ```
 
@@ -2837,13 +2837,13 @@ This more declarative API makes schema definitions vastly more concise.
 
 `io-ts` also requires the use of gcanti's functional programming library `fp-ts` to parse results and handle errors. This is another fantastic resource for developers looking to keep their codebase strictly functional. But depending on `fp-ts` necessarily comes with a lot of intellectual overhead; a developer has to be familiar with functional programming concepts and the `fp-ts` nomenclature to use the library.
 
-- Supports codecs with serialization & deserialization transforms
-- Supports branded types
-- Supports advanced functional programming, higher-kinded types, `fp-ts` compatibility
-- Missing object methods: (pick, omit, partial, deepPartial, merge, extend)
-- Missing nonempty arrays with proper typing (`[T, ...T[]]`)
-- Missing promise schemas
-- Missing function schemas
+-   Supports codecs with serialization & deserialization transforms
+-   Supports branded types
+-   Supports advanced functional programming, higher-kinded types, `fp-ts` compatibility
+-   Missing object methods: (pick, omit, partial, deepPartial, merge, extend)
+-   Missing nonempty arrays with proper typing (`[T, ...T[]]`)
+-   Missing promise schemas
+-   Missing function schemas
 
 ### Runtypes
 
@@ -2851,11 +2851,11 @@ This more declarative API makes schema definitions vastly more concise.
 
 Good type inference support.
 
-- Supports "pattern matching": computed properties that distribute over unions
-- Missing object methods: (deepPartial, merge)
-- Missing nonempty arrays with proper typing (`[T, ...T[]]`)
-- Missing promise schemas
-- Missing error customization
+-   Supports "pattern matching": computed properties that distribute over unions
+-   Missing object methods: (deepPartial, merge)
+-   Missing nonempty arrays with proper typing (`[T, ...T[]]`)
+-   Missing promise schemas
+-   Missing error customization
 
 ### Ow
 
