@@ -15,6 +15,7 @@ export default defineConfig({
         sidebar: [
             {
                 text: "Migrations",
+                link: "/migrations",
                 items: [
                     {
                         text: "Zod 1 → Zod 2",
@@ -26,6 +27,22 @@ export default defineConfig({
                     },
                 ],
                 collapsed: true,
+            },
+            {
+                text: "Changelog",
+                link: "/changelog",
+            },
+            {
+                text: "Code of Conduct",
+                link: "/code-of-conduct",
+            },
+            {
+                text: "Contributing",
+                link: "/contributing",
+            },
+            {
+                text: "Error Handling",
+                link: "/error-handling",
             },
         ],
 
