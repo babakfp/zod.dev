@@ -27,4 +27,14 @@ export default defineConfig({
             { icon: "github", link: "https://github.com/colinhacks/zod" },
         ],
     },
+    locales: {
+        root: {
+            label: "English",
+            lang: "en",
+        },
+        zh: {
+            label: "Chinese",
+            lang: "zh",
+        },
+    },
 })
