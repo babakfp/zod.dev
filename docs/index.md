@@ -15,12 +15,9 @@ hero:
           text: API Examples
           link: /api-examples
     image:
-        light:
-            src: /logo-light.svg
-            alt: Vite
-        dark:
-            src: /logo-dark.svg
-            alt: Vite
+        light: /logo-light.svg
+        dark: /logo-dark.svg
+        alt: Vite
 
 features:
     - title: Feature A
