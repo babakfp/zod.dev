@@ -14,11 +14,18 @@ export default defineConfig({
 
         sidebar: [
             {
-                text: "Examples",
+                text: "Migrations",
                 items: [
-                    { text: "Markdown Examples", link: "/markdown-examples" },
-                    { text: "Runtime API Examples", link: "/api-examples" },
+                    {
+                        text: "Zod 1 → Zod 2",
+                        link: "/migrations/v1-v2",
+                    },
+                    {
+                        text: "Zod 2 → Zod 3",
+                        link: "/migrations/v2-v3",
+                    },
                 ],
+                collapsed: true,
             },
         ],
 
