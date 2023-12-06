@@ -55,6 +55,10 @@ export default defineConfig({
                 text: "Error Handling",
                 link: "/error-handling",
             },
+            {
+                text: "License",
+                link: "/license",
+            },
         ],
         socialLinks: [
             { icon: "twitter", link: "https://twitter.com/colinhacks" },
