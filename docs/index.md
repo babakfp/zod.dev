@@ -9,21 +9,27 @@ hero:
     tagline: Achieve Limitless Schema Validation Through the Power of Static Type Inference.
     actions:
         - theme: brand
-          text: Markdown Examples
-          link: /markdown-examples
+          text: Get Started
+          link: \#TODO
         - theme: alt
-          text: API Examples
-          link: /api-examples
+          text: Why Zod?
+          link: \#TODO
     image:
         light: /logo-light.svg
         dark: /logo-dark.svg
         alt: Vite
 
 features:
-    - title: Feature A
-      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    - title: Feature B
-      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    - title: Feature C
-      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    - icon: 🌟
+      title: TypeScript-First
+      details: Type-check schemas with TypeScript seamlessly.
+    - icon: 🚀
+      title: Static Type Inference
+      details: Leverage static type inference for robust code.
+    - icon: 🛠️
+      title: Rich Features
+      details: Enjoy a concise API and comprehensive type support.
+    - icon: 🔄
+      title: Effortless Integration
+      details: Seamlessly integrate Zod into your codebase with ease.
 ---
