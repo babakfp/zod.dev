@@ -10,8 +10,19 @@ export default defineConfig({
         nav: [
             { text: "Home", link: "/" },
             { text: "Examples", link: "/markdown-examples" },
+            {
+                text: "More",
+                items: [
+                    { text: "NPM", link: "https://www.npmjs.com/package/zod" },
+                    { text: "Deno", link: "https://deno.land/x/zod" },
+                    { text: "tRPC", link: "https://trpc.io" },
+                    {
+                        text: "Issues",
+                        link: "https://github.com/colinhacks/zod/issues/new",
+                    },
+                ],
+            },
         ],
-
         sidebar: [
             {
                 text: "Migrations",
@@ -45,8 +56,8 @@ export default defineConfig({
                 link: "/error-handling",
             },
         ],
-
         socialLinks: [
+            { icon: "twitter", link: "https://twitter.com/colinhacks" },
             { icon: "discord", link: "https://discord.gg/KaSRdyX2vc" },
             { icon: "github", link: "https://github.com/colinhacks/zod" },
         ],
