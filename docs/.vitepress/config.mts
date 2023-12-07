@@ -29,6 +29,14 @@ export default defineConfig({
                 link: "/guide/",
             },
             {
+                text: "Error Handling",
+                link: "/error-handling",
+            },
+            {
+                text: "Sponsors",
+                link: "/sponsors",
+            },
+            {
                 text: "Migrations",
                 link: "/migrations/",
                 items: [
@@ -54,10 +62,6 @@ export default defineConfig({
             {
                 text: "Contributing",
                 link: "/contributing",
-            },
-            {
-                text: "Error Handling",
-                link: "/error-handling",
             },
             {
                 text: "License",
