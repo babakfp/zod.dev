@@ -58,12 +58,25 @@ Zod 被设计成对开发者尽可能友好。其目的是消除重复的类型�
 
 ### 从`npm`(Node/Bun)安装
 
-```sh
-npm install zod
-yarn add zod          # yarn
-bun add zod           # bun
-pnpm add zod          # pnpm
+::: code-group
+
+```sh [NPM]
+npm i zod
 ```
+
+```sh [PNPM]
+pnpm add zod
+```
+
+```sh [Yarn]
+yarn add zod
+```
+
+```sh [Bun]
+bun add zod
+```
+
+:::
 
 ### 从`deno.land/x` (Deno)安装
 

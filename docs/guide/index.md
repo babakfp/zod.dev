@@ -130,21 +130,47 @@ There are a growing number of tools that are built atop or support Zod natively!
 
 ### From `npm` (Node/Bun)
 
-```sh
-npm install zod       # npm
-yarn add zod          # yarn
-bun add zod           # bun
-pnpm add zod          # pnpm
+::: code-group
+
+```sh [NPM]
+npm i zod
 ```
+
+```sh [PNPM]
+pnpm add zod
+```
+
+```sh [Yarn]
+yarn add zod
+```
+
+```sh [Bun]
+bun add zod
+```
+
+:::
 
 Zod also publishes a canary version on every commit. To install the canary:
 
-```sh
-npm install zod@canary       # npm
-yarn add zod@canary          # yarn
-bun add zod@canary           # bun
-pnpm add zod@canary          # pnpm
+::: code-group
+
+```sh [NPM]
+npm i zod@canary
 ```
+
+```sh [PNPM]
+pnpm add zod@canary
+```
+
+```sh [Yarn]
+yarn add zod@canary
+```
+
+```sh [Bun]
+bun add zod@canary
+```
+
+:::
 
 ### From `deno.land/x` (Deno)
 
