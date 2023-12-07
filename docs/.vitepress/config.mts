@@ -8,14 +8,40 @@ export default defineConfig({
         logo: { light: "/logo-light.svg", dark: "/logo-dark.svg", alt: "Zod" },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
-            { text: "Home", link: "/" },
-            { text: "Examples", link: "/markdown-examples" },
+            { text: "Guide", link: "/guide/" },
             {
-                text: "More",
+                text: "Resources",
                 items: [
-                    { text: "NPM", link: "https://www.npmjs.com/package/zod" },
                     { text: "Deno", link: "https://deno.land/x/zod" },
                     { text: "tRPC", link: "https://trpc.io" },
+                    {
+                        items: [
+                            {
+                                text: "Twitter",
+                                link: "https://twitter.com/colinhacks",
+                            },
+                            {
+                                text: "Discord Chat",
+                                link: "https://discord.gg/KaSRdyX2vc",
+                            },
+                            {
+                                text: "GitHub",
+                                link: "https://github.com/colinhacks/zod",
+                            },
+                            {
+                                text: "NPM",
+                                link: "https://www.npmjs.com/package/zod",
+                            },
+                        ],
+                    },
+                ],
+            },
+            {
+                text: "v3.22.4",
+                items: [
+                    { text: "Changelog", link: "/changelog" },
+                    { text: "Migrations", link: "/migrations" },
+                    { text: "Contributing", link: "/contributing" },
                     {
                         text: "Issues",
                         link: "https://github.com/colinhacks/zod/issues/new",
