@@ -25,6 +25,10 @@ export default defineConfig({
         ],
         sidebar: [
             {
+                text: "Guide",
+                link: "/guide",
+            },
+            {
                 text: "Migrations",
                 link: "/migrations",
                 items: [
