@@ -69,6 +69,9 @@ export default defineConfig({
             { icon: "discord", link: "https://discord.gg/KaSRdyX2vc" },
             { icon: "github", link: "https://github.com/colinhacks/zod" },
         ],
+        outline: {
+            level: "deep",
+        },
     },
     locales: {
         root: {
