@@ -187,16 +187,11 @@ export default defineConfig({
                         text: "Comparison",
                         link: "/guide/#comparison",
                     },
+                    {
+                        text: "Error Handling",
+                        link: "/guide/error-handling",
+                    },
                 ],
-                collapsed: true,
-            },
-            {
-                text: "Error Handling",
-                link: "/error-handling",
-            },
-            {
-                text: "Sponsors",
-                link: "/sponsors",
             },
             {
                 text: "Migrations",
@@ -212,6 +207,10 @@ export default defineConfig({
                     },
                 ],
                 collapsed: true,
+            },
+            {
+                text: "Sponsors",
+                link: "/sponsors",
             },
             {
                 text: "Changelog",
