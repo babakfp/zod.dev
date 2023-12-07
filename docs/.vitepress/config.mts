@@ -12,6 +12,7 @@ export default defineConfig({
             {
                 text: "Resources",
                 items: [
+                    { text: "NPM", link: "https://www.npmjs.com/package/zod" },
                     { text: "Deno", link: "https://deno.land/x/zod" },
                     { text: "tRPC", link: "https://trpc.io" },
                     {
@@ -27,10 +28,6 @@ export default defineConfig({
                             {
                                 text: "GitHub",
                                 link: "https://github.com/colinhacks/zod",
-                            },
-                            {
-                                text: "NPM",
-                                link: "https://www.npmjs.com/package/zod",
                             },
                         ],
                     },
