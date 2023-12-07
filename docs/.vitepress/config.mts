@@ -189,7 +189,7 @@ export default defineConfig({
                     },
                     {
                         text: "Error Handling",
-                        link: "/guide/error-handling",
+                        link: "/guide/guide/error-handling",
                     },
                 ],
             },

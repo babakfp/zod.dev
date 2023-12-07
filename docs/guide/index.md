@@ -1751,7 +1751,7 @@ const Strings = z.array(z.string()).superRefine((val, ctx) => {
 
 You can add as many issues as you like. If `ctx.addIssue` is _not_ called during the execution of the function, validation passes.
 
-Normally refinements always create issues with a `ZodIssueCode.custom` error code, but with `superRefine` it's possible to throw issues of any `ZodIssueCode`. Each issue code is described in detail in the [Error Handling guide](/error-handling).
+Normally refinements always create issues with a `ZodIssueCode.custom` error code, but with `superRefine` it's possible to throw issues of any `ZodIssueCode`. Each issue code is described in detail in the [Error Handling guide](/guide/error-handling).
 
 #### Abort early
 
@@ -2283,7 +2283,7 @@ if (!result.success) {
 }
 ```
 
-> For detailed information about the possible error codes and how to customize error messages, check out the dedicated [error handling guide](/error-handling).
+> For detailed information about the possible error codes and how to customize error messages, check out the dedicated [error handling guide](/guide/error-handling).
 
 Zod's error reporting emphasizes _completeness_ and _correctness_. If you are looking to present a useful error message to the end user, you should either override Zod's error messages using an error map (described in detail in the Error Handling guide) or use a third-party library like [`zod-validation-error`](https://github.com/causaly/zod-validation-error)
 
