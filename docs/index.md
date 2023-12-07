@@ -10,10 +10,10 @@ hero:
     actions:
         - theme: brand
           text: Get Started
-          link: \#TODO
+          link: /guide/
         - theme: alt
           text: Why Zod?
-          link: \#TODO
+          link: /guide/#comparison
     image:
         light: /logo-light.svg
         dark: /logo-dark.svg
