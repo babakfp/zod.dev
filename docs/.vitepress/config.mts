@@ -50,6 +50,145 @@ export default defineConfig({
             {
                 text: "Guide",
                 link: "/guide/",
+                items: [
+                    {
+                        text: "Introduction",
+                        link: "/guide/#introduction",
+                    },
+                    {
+                        text: "Installation",
+                        link: "/guide/#installation",
+                    },
+                    {
+                        text: "Basic usage",
+                        link: "/guide/#basic-usage",
+                    },
+                    {
+                        text: "Primitives",
+                        link: "/guide/#primitives",
+                    },
+                    {
+                        text: "Coercion for primitives",
+                        link: "/guide/#coercion-for-primitives",
+                    },
+                    {
+                        text: "Literals",
+                        link: "/guide/#literals",
+                    },
+                    {
+                        text: "Strings",
+                        link: "/guide/#strings",
+                    },
+                    {
+                        text: "Numbers",
+                        link: "/guide/#numbers",
+                    },
+                    {
+                        text: "BigInts",
+                        link: "/guide/#big-ints",
+                    },
+                    {
+                        text: "NaNs",
+                        link: "/guide/#na-ns",
+                    },
+                    {
+                        text: "Booleans",
+                        link: "/guide/#booleans",
+                    },
+                    {
+                        text: "Dates",
+                        link: "/guide/#dates",
+                    },
+                    {
+                        text: "Zod enums",
+                        link: "/guide/#zod-enums",
+                    },
+                    {
+                        text: "Native enums",
+                        link: "/guide/#native-enums",
+                    },
+                    {
+                        text: "Optionals",
+                        link: "/guide/#optionals",
+                    },
+                    {
+                        text: "Nullables",
+                        link: "/guide/#nullables",
+                    },
+                    {
+                        text: "Objects",
+                        link: "/guide/#objects",
+                    },
+                    {
+                        text: "Arrays",
+                        link: "/guide/#arrays",
+                    },
+                    {
+                        text: "Tuples",
+                        link: "/guide/#tuples",
+                    },
+                    {
+                        text: "Unions",
+                        link: "/guide/#unions",
+                    },
+                    {
+                        text: "Discriminated unions",
+                        link: "/guide/#discriminated-unions",
+                    },
+                    {
+                        text: "Records",
+                        link: "/guide/#records",
+                    },
+                    {
+                        text: "Maps",
+                        link: "/guide/#maps",
+                    },
+                    {
+                        text: "Sets",
+                        link: "/guide/#sets",
+                    },
+                    {
+                        text: "Intersections",
+                        link: "/guide/#intersections",
+                    },
+                    {
+                        text: "Recursive types",
+                        link: "/guide/#recursive-types",
+                    },
+                    {
+                        text: "Promises",
+                        link: "/guide/#promises",
+                    },
+                    {
+                        text: "Instanceof",
+                        link: "/guide/#instanceof",
+                    },
+                    {
+                        text: "Functions",
+                        link: "/guide/#functions",
+                    },
+                    {
+                        text: "Preprocess",
+                        link: "/guide/#preprocess",
+                    },
+                    {
+                        text: "Custom schemas",
+                        link: "/guide/#custom-schemas",
+                    },
+                    {
+                        text: "Schema methods",
+                        link: "/guide/#schema-methods",
+                    },
+                    {
+                        text: "Guides and concepts",
+                        link: "/guide/#guides-and-concepts",
+                    },
+                    {
+                        text: "Comparison",
+                        link: "/guide/#comparison",
+                    },
+                ],
+                collapsed: true,
             },
             {
                 text: "Error Handling",
