@@ -1,4 +1,4 @@
-<!--@include: ../../components/better-translated-info.md-->
+<!--@include: @components/better-translated-info.md-->
 
 <p align="center" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
 <a href="https://github.com/colinhacks/zod/actions?query=branch%3Amaster"><img src="https://github.com/colinhacks/zod/actions/workflows/test.yml/badge.svg?event=push&branch=master" alt="Zod CI status" /></a>

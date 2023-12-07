@@ -1,1 +1,1 @@
-<!--@include: ../license.md-->
+<!--@include: @license.md-->

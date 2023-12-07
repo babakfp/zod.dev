@@ -1,1 +1,1 @@
-<!--@include: ../code-of-conduct.md-->
+<!--@include: @code-of-conduct.md-->

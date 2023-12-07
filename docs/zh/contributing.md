@@ -1,1 +1,1 @@
-<!--@include: ../contributing.md-->
+<!--@include: @contributing.md-->

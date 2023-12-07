@@ -1,1 +1,1 @@
-<!--@include: ../sponsors.md-->
+<!--@include: @sponsors.md-->
