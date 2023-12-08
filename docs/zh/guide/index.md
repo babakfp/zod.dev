@@ -1,3 +1,7 @@
+<script setup>
+import ContentSponsors from "../../components/ContentSponsors.vue"
+</script>
+
 <!--@include: @components/better-translated-info.md-->
 
 <p align="center" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
@@ -28,7 +32,13 @@ Zod 被设计成对开发者尽可能友好。其目的是消除重复的类型�
 -   功能性方法: [解析，不验证](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
 -   也可用于普通的 JavaScript! 你不需要使用 TypeScript。
 
-# 生态系统
+### Sponsors
+
+<!--@include: @components/sponsors-text.md-->
+
+<ContentSponsors />
+
+## 生态系统
 
 有越来越多的工具是建立在 Zod 之上或原生支持 Zod 的! 如果你在 Zod 的基础上建立了一个工具或库，请在[Twitter](https://twitter.com/colinhacks) 或者 [Discussion](https://github.com/colinhacks/zod/discussions)上告诉我。我会在下面添加，并在推特上发布。
 
@@ -43,7 +53,7 @@ Zod 被设计成对开发者尽可能友好。其目的是消除重复的类型�
 -   [`mobx-zod-form`](https://github.com/MonoidDev/mobx-zod-form): 以数据为中心的表格构建工具，基于 MobX 和 Zod。
 -   [`zodock`](https://github.com/ItMaga/zodock): 基於 Zod 模式生成模擬數據。
 
-# 安装
+## 安装
 
 ### 必要条件
 
