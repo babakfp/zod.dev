@@ -82,6 +82,30 @@ useSponsorsGrid({ el, size: props.size })
 </template>
 
 <style scoped>
+.vp-sponsor-grid.mini .vp-sponsor-grid-box,
+.vp-sponsor-grid.xmini .vp-sponsor-grid-box {
+    align-content: center;
+}
+.vp-sponsor-grid.mini .sponsor-name,
+.vp-sponsor-grid.xmini .sponsor-name {
+    font-size: 14px;
+    margin-top: 0.25rem;
+}
+.vp-sponsor-grid.mini .vp-sponsor-grid-link,
+.vp-sponsor-grid.xmini .vp-sponsor-grid-link {
+    height: 100%;
+}
+.vp-sponsor-grid.mini .vp-sponsor-grid-link {
+    padding: 2rem 1rem;
+}
+.vp-sponsor-grid.xmini .vp-sponsor-grid-link {
+    padding: 1rem;
+}
+.vp-sponsor-grid.mini .vp-sponsor-grid-image,
+.vp-sponsor-grid.xmini .vp-sponsor-grid-image {
+    max-width: calc(96px * 1.5);
+    max-height: calc(24px * 1.5);
+}
 .vp-sponsor-grid.big .vp-sponsor-grid-link {
     height: 100%;
     padding: 2rem 1rem;

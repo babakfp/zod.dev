@@ -8,5 +8,5 @@ import sponsors from "#docs/_data/sponsorsData.json"
     <br />
     <Sponsors tier="Silver" size="big" :data="sponsors[1].items" />
     <br />
-    <Sponsors tier="Bronze" size="big" :data="sponsors[2].items" />
+    <Sponsors tier="Bronze" size="xmini" :data="sponsors[2].items" />
 </template>
