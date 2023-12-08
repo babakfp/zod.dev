@@ -1,5 +1,5 @@
 <script setup>
-import { VPHomeSponsors } from "vitepress/theme"
+import VPHomeSponsors from "#docs/components/VPHomeSponsors.vue"
 import sponsors from "#docs/_data/sponsorsData.json"
 </script>
 

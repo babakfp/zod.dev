@@ -1,5 +1,5 @@
 <script setup>
-import Sponsors from "#docs/components/Sponsors.vue"
+import Sponsors from "#docs/components/VPSponsors.vue"
 import sponsors from "#docs/_data/sponsorsData.json"
 </script>
 

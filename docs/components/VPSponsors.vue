@@ -1,9 +1,9 @@
 <!-- Copied from vuejs/vitepress/src/client/theme-default/components/VPSponsors.vue -->
 
 <script setup lang="ts">
-import type { Sponsor } from "#docs/components/SponsorsGrid.vue"
+import type { Sponsor } from "#docs/components/VPSponsorsGrid.vue"
 import { computed } from "vue"
-import VPSponsorsGrid from "#docs/components/SponsorsGrid.vue"
+import VPSponsorsGrid from "#docs/components/VPSponsorsGrid.vue"
 
 export type GridSize = "xmini" | "mini" | "small" | "medium" | "big"
 export interface Sponsors {
