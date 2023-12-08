@@ -3,7 +3,7 @@
         "dev": "vitepress dev docs",
         "build": "vitepress build docs",
         "preview": "vitepress preview docs",
-        "fmt": "prettier . -w"
+        "format": "prettier . -w"
     },
     "devDependencies": {
         "prettier": "3.1.0",
