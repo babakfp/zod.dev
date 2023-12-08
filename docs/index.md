@@ -34,4 +34,8 @@ features:
       details: Seamlessly integrate Zod into your codebase with ease.
 ---
 
-<!--@include: @components/home-sponsors.md-->
+<script setup>
+    import HomeSponsors from './components/HomeSponsors.vue'
+</script>
+
+<HomeSponsors />
