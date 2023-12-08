@@ -1,9 +1,9 @@
 <script setup>
-import { VPDocAsideSponsors } from "vitepress/theme"
+import Sponsors from './components/Sponsors.vue'
 import sponsors from "./_data/sponsors.json"
 </script>
 
-<VPDocAsideSponsors
+<Sponsors
     tier="Gold"
     size="big"
     :data="sponsors[0].items"
@@ -11,16 +11,16 @@ import sponsors from "./_data/sponsors.json"
 
 <br />
 
-<VPDocAsideSponsors
+<Sponsors
     tier="Silver"
-    size="medium"
+    size="big"
     :data="sponsors[1].items"
 />
 
 <br />
 
-<VPDocAsideSponsors
+<Sponsors
     tier="Bronze"
-    size="xmini"
+    size="big"
     :data="sponsors[2].items"
 />

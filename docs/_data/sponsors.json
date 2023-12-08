@@ -15,7 +15,8 @@
                 "url": "https://glow.app",
                 "img": "https://i.imgur.com/R0R43S2.jpg",
                 "alt": "Glow Wallet",
-                "description": "Your new favorite<br/>Solana wallet."
+                "description": "Your new favorite<br/>Solana wallet.",
+                "isImgFullyRounded": true
             },
             {
                 "name": "Deletype",
