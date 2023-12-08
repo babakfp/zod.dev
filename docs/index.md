@@ -33,3 +33,5 @@ features:
       title: Effortless Integration
       details: Seamlessly integrate Zod into your codebase with ease.
 ---
+
+<!--@include: @components/sponsors.md-->
