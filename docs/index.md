@@ -35,7 +35,7 @@ features:
 ---
 
 <script setup>
-    import HomeSponsors from './components/HomeSponsors.vue'
+    import HomeSponsors from '#docs/components/HomeSponsors.vue'
 </script>
 
 <HomeSponsors />

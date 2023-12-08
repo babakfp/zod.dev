@@ -1,6 +1,6 @@
 <script setup>
-import Sponsors from "./Sponsors.vue"
-import sponsors from "../_data/sponsorsData.json"
+import Sponsors from "#docs/components/Sponsors.vue"
+import sponsors from "#docs/_data/sponsorsData.json"
 </script>
 
 <template>

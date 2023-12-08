@@ -1,5 +1,5 @@
 <script setup>
-import ContentSponsors from "./components/ContentSponsors.vue"
+import ContentSponsors from "#docs/components/ContentSponsors.vue"
 </script>
 
 # Sponsors

@@ -10,5 +10,8 @@
         "vitepress": "1.0.0-rc.31",
         "vue": "3.3.11"
     },
+    "imports": {
+        "#docs/*": "./docs/*"
+    },
     "type": "module"
 }

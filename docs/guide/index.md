@@ -1,5 +1,5 @@
 <script setup>
-import ContentSponsors from "../components/ContentSponsors.vue"
+import ContentSponsors from "#docs/components/ContentSponsors.vue"
 </script>
 
 <p align="center" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
