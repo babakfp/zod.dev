@@ -1,6 +1,6 @@
 <script setup>
 import { VPHomeSponsors } from "vitepress/theme"
-import sponsors from "./_data/sponsors.json"
+import sponsors from "./_data/sponsorsData.json"
 </script>
 
 <VPHomeSponsors

@@ -1,3 +1,7 @@
+<script setup>
+import ContentSponsors from "../components/ContentSponsors.vue"
+</script>
+
 <p align="center" style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
 <a href="https://github.com/colinhacks/zod/actions?query=branch%3Amaster"><img src="https://github.com/colinhacks/zod/actions/workflows/test.yml/badge.svg?event=push&branch=master" alt="Zod CI status" /></a>
 <a href="https://twitter.com/colinhacks" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@colinhacks-4BBAAB.svg" alt="Created by Colin McDonnell"></a>
@@ -22,6 +26,12 @@ Some other great aspects:
 -   Concise, chainable interface
 -   Functional approach: [parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
 -   Works with plain JavaScript too! You don't need to use TypeScript.
+
+### Sponsors
+
+<!--@include: @components/sponsors-text.md-->
+
+<ContentSponsors />
 
 ### Ecosystem
 
