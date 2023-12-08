@@ -40,7 +40,7 @@ withDefaults(defineProps<Props>(), {
                     :key="sponsors.tier"
                     :tier="sponsors.tier"
                     :size="sponsors.size"
-                    :data="data"
+                    :data="sponsors.items"
                 />
             </div>
 
@@ -93,6 +93,8 @@ withDefaults(defineProps<Props>(), {
 
 .sponsors {
     padding-top: 32px;
+    display: grid;
+    gap: 1.5rem;
 }
 
 .action {

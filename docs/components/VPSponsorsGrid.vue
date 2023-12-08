@@ -1,31 +1,10 @@
 <!-- Copied from vuejs/vitepress/src/client/theme-default/components/VPSponsorsGrid.vue -->
-<!-- Added some changes to show name and description and more... -->
 
 <script setup lang="ts">
 import { ref } from "vue"
 import { useSponsorsGrid } from "vitepress/dist/client/theme-default/composables/sponsor-grid"
 
-// type BronzeTier = {
-//     name: string
-//     link: string
-//     avatar: string
-// }
-
-// type SilverTier = {
-//     name: string
-//     link: string
-//     logo: string
-// }
-
-// type GoldTier = {
-//     name: string
-//     link: string
-//     logo: string
-//     description?: string
-// }
-
 export type GridSize = "xmini" | "mini" | "small" | "medium" | "big"
-
 export interface Sponsor {
     name: string
     img: string
@@ -72,9 +51,16 @@ useSponsorsGrid({ el, size: props.size })
                     />
                     <h4 class="sponsor-name">{{ sponsor.name }}</h4>
                     <p
-                        v-if="props.tier === 'Gold'"
+                        v-if="props.tier === 'Gold' && sponsor.description"
                         v-html="sponsor.description"
                     ></p>
+                    <p
+                        v-else-if="
+                            props.tier === 'Gold' && !sponsor.description
+                        "
+                    >
+                        Click to learn more
+                    </p>
                 </article>
             </a>
         </div>
