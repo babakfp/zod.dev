@@ -133,4 +133,17 @@ useSponsorsGrid({ el, size: props.size })
 .img-is-fully-rounded {
     border-radius: 9999px;
 }
+.vp-sponsor-grid-item,
+.vp-sponsor-grid-image {
+    transition: 250ms;
+}
+.dark .vp-sponsor-grid-item:hover {
+    background-color: rgba(101, 117, 133, 0.26);
+}
+.dark .vp-sponsor-grid-item:hover .vp-sponsor-grid-image {
+    filter: grayscale(0);
+}
+.dark .vp-sponsor-grid-image {
+    filter: grayscale(1);
+}
 </style>
