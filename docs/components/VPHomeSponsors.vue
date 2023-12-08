@@ -35,7 +35,13 @@ withDefaults(defineProps<Props>(), {
             </div>
 
             <div class="sponsors">
-                <VPSponsors :data="data" />
+                <VPSponsors
+                    v-for="sponsors in data"
+                    :key="sponsors.tier"
+                    :tier="sponsors.tier"
+                    :size="sponsors.size"
+                    :data="data"
+                />
             </div>
 
             <div v-if="actionLink" class="action">
