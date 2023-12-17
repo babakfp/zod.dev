@@ -3,6 +3,8 @@ import { defineConfig } from "vitepress"
 const metaDescription =
     "TypeScript-first schema validation with static type inference"
 
+const googleTagManagerID = "G-FG8DDV0GBR"
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Zod",
@@ -122,6 +124,26 @@ export default defineConfig({
             },
         ],
         ["meta", { name: "theme-color", content: "#ffffff" }],
+
+        [
+            "script",
+            {
+                async: "",
+                src: `https://www.googletagmanager.com/gtag/js?id=${googleTagManagerID}`,
+            },
+        ],
+        [
+            "script",
+            {},
+            `
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag("js", new Date());
+                gtag("config", "${googleTagManagerID}");
+            `,
+        ],
     ],
     themeConfig: {
         logo: { src: "/logo.svg", alt: "Zod" },
