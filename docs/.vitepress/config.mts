@@ -10,7 +10,7 @@ export default defineConfig({
     title: "Zod",
     description: "TypeScript-First Schema Validation",
     head: [
-        ["link", { rel: "icon", href: "/logo.svg" }],
+        ["link", { rel: "icon", href: "/logo.svg", type:"image/svg" }],
 
         [
             "meta",
