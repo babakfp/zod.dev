@@ -30,7 +30,7 @@ export default defineConfig({
                             },
                             {
                                 text: "Discord Chat",
-                                link: "https://discord.gg/KaSRdyX2vc",
+                                link: "https://discord.gg/RcG33DQJdf",
                             },
                             {
                                 text: "GitHub",
@@ -100,7 +100,7 @@ export default defineConfig({
         ],
         socialLinks: [
             { icon: "twitter", link: "https://twitter.com/colinhacks" },
-            { icon: "discord", link: "https://discord.gg/KaSRdyX2vc" },
+            { icon: "discord", link: "https://discord.gg/RcG33DQJdf" },
             { icon: "github", link: "https://github.com/colinhacks/zod" },
         ],
         outline: {
