@@ -1,3 +1,7 @@
+---
+title: Guide
+---
+
 <script setup>
 import ContentSponsors from "#docs/components/ContentSponsors.vue"
 </script>
