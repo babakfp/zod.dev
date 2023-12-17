@@ -1,10 +1,128 @@
 import { defineConfig } from "vitepress"
 
+const metaDescription =
+    "TypeScript-first schema validation with static type inference"
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Zod",
     description: "TypeScript-First Schema Validation",
-    head: [["link", { rel: "icon", href: "/logo.svg" }]],
+    head: [
+        ["link", { rel: "icon", href: "/logo.svg" }],
+
+        [
+            "meta",
+            {
+                name: "description",
+                content: metaDescription,
+            },
+        ],
+
+        [
+            "meta",
+            {
+                name: "twitter:title",
+                content: metaDescription,
+            },
+        ],
+        ["meta", { name: "twitter:card", content: "summary_large_image" }],
+        ["meta", { name: "twitter:site", content: "@colinhacks" }],
+        [
+            "meta",
+            {
+                name: "twitter:image:src",
+                content:
+                    "https://opengraph.githubassets.com/1cac1150838995e1f7d1643c00eee51a5d884f2054f995c9d3225b07b0eddb39/colinhacks/zod",
+            },
+        ],
+
+        [
+            "meta",
+            {
+                property: "og:image",
+                content:
+                    "https://opengraph.githubassets.com/1cac1150838995e1f7d1643c00eee51a5d884f2054f995c9d3225b07b0eddb39/colinhacks/zod",
+            },
+        ],
+        [
+            "meta",
+            {
+                property: "og:image:alt",
+                content: metaDescription,
+            },
+        ],
+        ["meta", { property: "og:image:width", content: "1200" }],
+        ["meta", { property: "og:image:height", content: "600" }],
+        ["meta", { property: "og:site_name", content: "GitHub" }],
+        ["meta", { property: "og:type", content: "object" }],
+        [
+            "meta",
+            {
+                property: "og:title",
+                content: metaDescription,
+            },
+        ],
+        [
+            "meta",
+            {
+                property: "og:url",
+                content: "https://github.com/colinhacks/zod",
+            },
+        ],
+        [
+            "meta",
+            {
+                property: "og:description",
+                content: metaDescription,
+            },
+        ],
+
+        [
+            "link",
+            {
+                rel: "apple-touch-icon",
+                sizes: "180x180",
+                href: "/apple-touch-icon.png",
+            },
+        ],
+        [
+            "link",
+            {
+                rel: "icon",
+                type: "image/png",
+                sizes: "32x32",
+                href: "/favicon-32x32.png",
+            },
+        ],
+        [
+            "link",
+            {
+                rel: "icon",
+                type: "image/png",
+                sizes: "16x16",
+                href: "/favicon-16x16.png",
+            },
+        ],
+        ["link", { rel: "manifest", href: "/site.webmanifest" }],
+        [
+            "link",
+            {
+                rel: "mask-icon",
+                href: "/safari-pinned-tab.svg",
+                color: "#5bbad5",
+            },
+        ],
+        ["link", { rel: "shortcut icon", href: "/favicon.ico" }],
+        ["meta", { name: "msapplication-TileColor", content: "#da532c" }],
+        [
+            "meta",
+            {
+                name: "msapplication-config",
+                content: "/browserconfig.xml",
+            },
+        ],
+        ["meta", { name: "theme-color", content: "#ffffff" }],
+    ],
     themeConfig: {
         logo: { src: "/logo.svg", alt: "Zod" },
         // https://vitepress.dev/reference/default-theme-config
