@@ -1,18 +1,12 @@
 import { defineConfig } from "vitepress"
-import { vitepressPrefersColorSchemeFaviconAutoSwitcher } from "./utils/vitepressPrefersColorSchemeFaviconAutoSwitcher"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Zod",
     description: "TypeScript-First Schema Validation",
-    head: [
-        ...vitepressPrefersColorSchemeFaviconAutoSwitcher(
-            "/logo-light.svg",
-            "/logo-dark.svg",
-        ),
-    ],
+    head: [["link", { rel: "icon", href: "/logo.svg" }]],
     themeConfig: {
-        logo: { light: "/logo-light.svg", dark: "/logo-dark.svg", alt: "Zod" },
+        logo: { src: "/logo.svg", alt: "Zod" },
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: "Guide", link: "/guide/" },

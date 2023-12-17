@@ -15,8 +15,7 @@ hero:
           text: Why Zod?
           link: /guide/#comparison
     image:
-        light: /logo-light.svg
-        dark: /logo-dark.svg
+        src: /logo.svg
         alt: Vite
 
 features:
