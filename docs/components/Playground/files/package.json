@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "dev": "node --watch index.js"
+    },
+    "devDependencies": {
+        "zod": "3.22.4"
+    },
+    "type": "module"
+}

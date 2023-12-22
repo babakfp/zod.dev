@@ -256,6 +256,9 @@ export default defineConfig({
     },
     cleanUrls: true,
     vite: {
+        ssr: {
+            noExternal: ["vue-codemirror", "xterm"],
+        },
         plugins: [
             {
                 name: "cross-origin-isolated-plugin",
