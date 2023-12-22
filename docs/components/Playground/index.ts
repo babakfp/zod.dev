@@ -5,7 +5,7 @@ let webContainerPromise: Promise<WebContainer>
 
 export const useWebContainer = async () => {
     if (!webContainerPromise) {
-        webContainerPromise = WebContainer.boot({ coep: "none" })
+        webContainerPromise = WebContainer.boot()
     }
     return await webContainerPromise
 }
