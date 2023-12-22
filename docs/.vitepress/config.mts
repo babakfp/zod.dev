@@ -255,4 +255,26 @@ export default defineConfig({
         },
     },
     cleanUrls: true,
+    vite: {
+        plugins: [
+            {
+                name: "cross-origin-isolated-plugin",
+                configureServer: server => {
+                    server.middlewares.use((req, res, next) => {
+                        if (req.originalUrl === "/playground") {
+                            res.setHeader(
+                                "Cross-Origin-Embedder-Policy",
+                                "require-corp",
+                            )
+                            res.setHeader(
+                                "Cross-Origin-Opener-Policy",
+                                "same-origin",
+                            )
+                        }
+                        next()
+                    })
+                },
+            },
+        ],
+    },
 })
