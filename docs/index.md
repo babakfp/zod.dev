@@ -14,6 +14,9 @@ hero:
         - theme: alt
           text: Why Zod?
           link: /guide/#comparison
+        - theme: alt
+          text: Play
+          link: /playground
     image:
         src: /logo.svg
         alt: Vite
