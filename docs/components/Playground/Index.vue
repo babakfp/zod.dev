@@ -19,6 +19,7 @@ onMounted(async () => {
     const terminal = new Terminal({
         convertEol: true,
         fontFamily: "var(--vp-font-family-mono)",
+        rows: 15,
     })
 
     if (terminalElement.value) {
